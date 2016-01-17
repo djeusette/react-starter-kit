@@ -15,10 +15,8 @@ import ContentPage from './components/ContentPage';
 import ContactPage from './components/ContactPage';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
-// import NotFoundPage from './components/NotFoundPage';
-// import ErrorPage from './components/ErrorPage';
-import fs from 'fs';
-import path from 'path';
+import NotFoundPage from './components/NotFoundPage';
+import ErrorPage from './components/ErrorPage';
 
 // const router = new Router(on => {
 //   on('*', async (state, next) => {
@@ -61,6 +59,17 @@ let RegisterRoute = {
   component: RegisterPage
 }
 
+let NotFoundRoute = {
+  path: '/*',
+  component: NotFoundPage
+}
+
+let ErrorRoute = {
+  component: ErrorPage
+}
+
+const content = ['about', 'index', 'privacy'];
+
 function getContentRoute(location, callback) {
   return fetch(`/api/content?path=${location.pathname}`).then(function(result) {
     return result.json();
@@ -71,19 +80,14 @@ function getContentRoute(location, callback) {
 
 function getContentRoutes() {
   let routes = [];
-  let contentPath = path.resolve('./src/content');
-  console.log("--- path", contentPath);
-  let files = fs.readdirSync(contentPath);
-  files.forEach((file) => {
-    if (path.extname(file) === '.jade') {
-      routes.push({
-        path: '/' + path.basename(file, '.jade'),
-        component: App,
-        getIndexRoute(location, callback) {
-          getContentRoute(location, callback);
-        }
-      });
-    }
+  content.forEach((page) => {
+    routes.push({
+      path: '/' + page,
+      component: App,
+      getIndexRoute(location, callback) {
+        getContentRoute(location, callback);
+      }
+    });
   });
   return routes;
 }
@@ -92,7 +96,7 @@ let RootRoute = {
   path: '/',
   component: App,
   getChildRoutes(location, callback) {
-    callback(null, [ContactRoute, LoginRoute, RegisterRoute]);
+    callback(null, [ContactRoute, LoginRoute, RegisterRoute, NotFoundRoute]);
   },
   getIndexRoute(location, callback) {
     getContentRoute(location, callback);
