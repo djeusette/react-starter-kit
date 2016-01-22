@@ -23,17 +23,6 @@ let RegisterRoute = {
   component: RegisterPage
 };
 
-let NotFoundRoute = {
-  path: '/*',
-  component: NotFoundPage
-}
-
-let ErrorRoute = {
-  component: ErrorPage
-}
-
-const content = ['about', 'index', 'privacy'];
-
 function getContentRoute(location, callback) {
   return fetch(`/api/content?path=${location.pathname}`).then(function(result) {
     return result.json();
@@ -60,7 +49,7 @@ let RootRoute = {
   path: '/',
   component: App,
   getChildRoutes(location, callback) {
-    callback(null, [ContactRoute, LoginRoute, RegisterRoute, NotFoundRoute]);
+    callback(null, [ContactRoute, LoginRoute, RegisterRoute]);
   },
   getIndexRoute(location, callback) {
     getContentRoute(location, callback);
