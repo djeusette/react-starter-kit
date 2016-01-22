@@ -12,7 +12,6 @@ import path from 'path';
 import express from 'express';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
-// import Router from './routes';
 import routes from './routes';
 
 import { match } from 'react-router';
