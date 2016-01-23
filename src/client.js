@@ -8,9 +8,11 @@
  */
 
 import 'babel-polyfill';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import FastClick from 'fastclick';
-import Router from './routes';
+import { match, Router } from 'react-router';
+import routes from './routes';
 import Location from './core/Location';
 import { addEventListener, removeEventListener } from './core/DOMUtils';
 
@@ -35,23 +37,30 @@ const context = {
   },
 };
 
-function render(state) {
-  Router.dispatch(state, (newState, component) => {
-    ReactDOM.render(component, appContainer, () => {
-      // Restore the scroll position if it was saved into the state
-      if (state.scrollY !== undefined) {
-        window.scrollTo(state.scrollX, state.scrollY);
-      } else {
-        window.scrollTo(0, 0);
-      }
+function render(location) {
+  // Router.dispatch(state, (newState, component) => {
+  console.log("--- Going to render", location);
+  match({ routes, location }, (error, redirectLocation, renderProps) => {
 
-      // Remove the pre-rendered CSS because it's no longer used
-      // after the React app is launched
-      if (cssContainer) {
-        cssContainer.parentNode.removeChild(cssContainer);
-        cssContainer = null;
-      }
-    });
+    console.log("--- After match", error, redirectLocation, renderProps);
+
+    // let component = <Router routes={routes} history={browserHistory} />;
+    // let appContainer = document.getElementById('app');
+    // ReactDOM.render(component, appContainer, () => {
+    //   // Restore the scroll position if it was saved into the state
+    //   if (browserHistory.scrollY !== undefined) {
+    //     window.scrollTo(browserHistory.scrollX, browserHistory.scrollY);
+    //   } else {
+    //     window.scrollTo(0, 0);
+    //   }
+
+    //   // Remove the pre-rendered CSS because it's no longer used
+    //   // after the React app is launched
+    //   if (cssContainer) {
+    //     cssContainer.parentNode.removeChild(cssContainer);
+    //     cssContainer = null;
+    //   }
+    // });
   });
 }
 
@@ -64,14 +73,15 @@ function run() {
 
   // Re-render the app when window.location changes
   const unlisten = Location.listen(location => {
+    console.log("--- location change", location);
     currentLocation = location;
-    currentState = Object.assign({}, location.state, {
-      path: location.pathname,
-      query: location.query,
-      state: location.state,
-      context,
-    });
-    render(currentState);
+    // currentState = Object.assign({}, location.state, {
+    //   path: location.pathname,
+    //   query: location.query,
+    //   state: location.state,
+    //   context,
+    // });
+    render(location);
   });
 
   // Save the page scroll position into the current location's state

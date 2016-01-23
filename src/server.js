@@ -49,6 +49,8 @@ server.get('*', async (req, res, next) => {
     };
 
     match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+      console.log('---- AFTER MATCH server-side');
+
       if (error) {
         res.status(500).send(error.message)
       } else if (redirectLocation) {
