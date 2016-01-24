@@ -15,7 +15,7 @@ import RouterContext from './CustomRouterContext';
 import routes from './routes';
 import { Router, match } from 'react-router';
 import Location from './core/Location';
-import { addEventListener, removeEventListener } from './core/DOMUtils';
+import { addEventListener } from './core/DOMUtils';
 
 let cssContainer = document.getElementById('css');
 const appContainer = document.getElementById('app');
