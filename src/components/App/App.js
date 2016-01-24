@@ -42,7 +42,7 @@ class App extends Component {
   // };
 
   // getChildContext() {
-  //   console.log("---- getChildContext", this.context);
+  //   console.log("---- App getChildContext", this.context);
   //   const context = this.context;
   //   return {
   //     insertCss: context.insertCss || emptyFunction,
