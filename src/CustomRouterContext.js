@@ -1,5 +1,7 @@
 import { RouterContext } from 'react-router';
 import { PropTypes } from 'react';
+import emptyFunction from 'fbjs/lib/emptyFunction';
+import _ from 'lodash';
 
 class CustomRouterContext extends RouterContext {
   static propTypes = {
@@ -33,6 +35,13 @@ class CustomRouterContext extends RouterContext {
   getChildContext() {
     let defaultContext = super.getChildContext();
     let { context } = this.props;
+
+    context = _.defaults(context, {
+      insertCss: emptyFunction,
+      onSetTitle: emptyFunction,
+      onSetMeta: emptyFunction,
+      onPageNotFound: emptyFunction
+    });
 
     return {...defaultContext, ...context};
   }
