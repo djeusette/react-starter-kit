@@ -16,6 +16,7 @@ import routes from './routes';
 import { Router, match } from 'react-router';
 import Location from './core/Location';
 import { addEventListener } from './core/DOMUtils';
+import { createLocation } from 'history';
 
 let cssContainer = document.getElementById('css');
 const appContainer = document.getElementById('app');
@@ -61,10 +62,9 @@ function run() {
   // Make taps on links and buttons work fast on mobiles
   FastClick.attach(document.body);
 
-  const { pathname, search, hash } = window.location
-  const location = `${pathname}${search}${hash}`
+  const location = createLocation(window.location);
 
-  match({ routes: routes, location: location }, () => {
+  match({ routes, location }, () => {
     render();
   });
 }

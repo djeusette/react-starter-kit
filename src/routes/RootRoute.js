@@ -11,12 +11,10 @@ export default {
     require.ensure([], (require) => {
       callback(null, [ require('./ContactRoute'), require('./LoginRoute'), require('./RegisterRoute') ]);
     });
-
-    // callback(null, [ContactRoute, LoginRoute, RegisterRoute]);
   },
   getIndexRoute(location, callback) {
-    getContentRoute(location).then(function(contentRoute) {
+    return getContentRoute(location).then(function(contentRoute) {
       callback(null, contentRoute);
-    });
+    }).catch(callback);
   }
 };

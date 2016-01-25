@@ -19,10 +19,9 @@ export function getContentRoutes() {
       path: '/' + page,
       component: App,
       getIndexRoute(location, callback) {
-        getContentRoute(location).then(function(contentRoute) {
-          console.log("--- GOT content route", contentRoute);
+        return getContentRoute(location).then(function(contentRoute) {
           callback(null, contentRoute);
-        });
+        }).catch(callback);
       }
     });
   });
