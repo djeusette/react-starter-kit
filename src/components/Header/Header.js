@@ -10,7 +10,7 @@
 import React, { Component } from 'react';
 import s from './Header.scss';
 import withStyles from '../../decorators/withStyles';
-import Link from '../Link';
+import { Link } from 'react-router';
 import Navigation from '../Navigation';
 
 @withStyles(s)
