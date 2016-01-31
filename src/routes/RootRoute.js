@@ -13,6 +13,7 @@ export default {
     });
   },
   getIndexRoute(location, callback) {
+    console.log("--- 4) RootRoute.getIndexRoute: location", location);
     return getContentRoute(location).then(function(contentRoute) {
       callback(null, contentRoute);
     }).catch(callback);

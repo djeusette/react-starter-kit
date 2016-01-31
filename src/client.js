@@ -39,12 +39,16 @@ const context = {
   },
 };
 
-function render() {
-  let routerRender = function(props) {
+function render(props) {
+  const renderFn = function(props) {
     return <RouterContext {...props} />;
   }
 
-  let component = <Router history={Location} routes={routes} render={routerRender} context={context} />;
+  // const component = <Router history={Location} routes={routes} render={routerRender} context={context} />;
+
+  console.log("---- props", props);
+
+  const component = <Router {...props} render={renderFn} context={context} />;
 
   ReactDOM.render(component, appContainer, () => {
     // Remove the pre-rendered CSS because it's no longer used
@@ -57,16 +61,19 @@ function render() {
 }
 
 function run() {
-  let currentLocation = null;
-
   // Make taps on links and buttons work fast on mobiles
   FastClick.attach(document.body);
 
-  const location = createLocation(window.location);
+  // const location = createLocation(window.location);
 
-  match({ routes, location }, () => {
-    render();
+  match({ history: Location, routes: routes }, (error, redirectLocation, renderProps) => {
+    console.log("--- Client - after match");
+    render(renderProps);
   });
+
+  // match({ routes, location }, () => {
+  //   render();
+  // });
 }
 
 // Run the application when both DOM is ready and page content is loaded
