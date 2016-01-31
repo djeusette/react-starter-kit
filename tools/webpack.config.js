@@ -29,6 +29,8 @@ const GLOBALS = {
   __DEV__: DEBUG,
 };
 
+console.log("--- GLOBALS", GLOBALS);
+
 //
 // Common configuration chunk to be used for both
 // client-side (client.js) and server-side (server.js) bundles
