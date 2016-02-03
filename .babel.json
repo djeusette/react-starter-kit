@@ -1,0 +1,1751 @@
+{
+  "{\"filename\":\"/home/client_frontend/tools/run.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false}:6.4.5": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/client_frontend/tools/run.js",
+      "filenameRelative": "/home/client_frontend/tools/run.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "run.js",
+      "sourceFileName": "run.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "basename": "run"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nfunction format(time) {\n  return time.toTimeString().replace(/.*(\\d{2}:\\d{2}:\\d{2}).*/, '$1');\n}\n\nfunction run(fn, options) {\n  var task = typeof fn.default === 'undefined' ? fn : fn.default;\n  var start = new Date();\n  console.log('[' + format(start) + '] Starting \\'' + task.name + '\\'...');\n  return task(options).then(function () {\n    var end = new Date();\n    var time = end.getTime() - start.getTime();\n    console.log('[' + format(end) + '] Finished \\'' + task.name + '\\' after ' + time + ' ms');\n  });\n}\n\nif (process.mainModule.children.length === 0 && process.argv.length > 2) {\n  delete require.cache[__filename];\n  var module = require('./' + process.argv[2] + '.js').default;\n  run(module).catch(function (err) {\n    return console.error(err.stack);\n  });\n}\n\nexports.default = run;\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ1bi5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQVNBLFNBQVMsTUFBVCxDQUFnQixJQUFoQixFQUFzQjtBQUNwQixTQUFPLEtBQUssWUFBTCxHQUFvQixPQUFwQixDQUE0Qix5QkFBNUIsRUFBdUQsSUFBdkQsQ0FBUCxDQURvQjtDQUF0Qjs7QUFJQSxTQUFTLEdBQVQsQ0FBYSxFQUFiLEVBQWlCLE9BQWpCLEVBQTBCO0FBQ3hCLE1BQU0sT0FBTyxPQUFPLEdBQUcsT0FBSCxLQUFlLFdBQXRCLEdBQW9DLEVBQXBDLEdBQXlDLEdBQUcsT0FBSCxDQUQ5QjtBQUV4QixNQUFNLFFBQVEsSUFBSSxJQUFKLEVBQVIsQ0FGa0I7QUFHeEIsVUFBUSxHQUFSLE9BQWdCLE9BQU8sS0FBUCxzQkFBNEIsS0FBSyxJQUFMLFVBQTVDLEVBSHdCO0FBSXhCLFNBQU8sS0FBSyxPQUFMLEVBQWMsSUFBZCxDQUFtQixZQUFNO0FBQzlCLFFBQU0sTUFBTSxJQUFJLElBQUosRUFBTixDQUR3QjtBQUU5QixRQUFNLE9BQU8sSUFBSSxPQUFKLEtBQWdCLE1BQU0sT0FBTixFQUFoQixDQUZpQjtBQUc5QixZQUFRLEdBQVIsT0FBZ0IsT0FBTyxHQUFQLHNCQUEwQixLQUFLLElBQUwsaUJBQW9CLFlBQTlELEVBSDhCO0dBQU4sQ0FBMUIsQ0FKd0I7Q0FBMUI7O0FBV0EsSUFBSSxRQUFRLFVBQVIsQ0FBbUIsUUFBbkIsQ0FBNEIsTUFBNUIsS0FBdUMsQ0FBdkMsSUFBNEMsUUFBUSxJQUFSLENBQWEsTUFBYixHQUFzQixDQUF0QixFQUF5QjtBQUN2RSxTQUFPLFFBQVEsS0FBUixDQUFjLFVBQWQsQ0FBUCxDQUR1RTtBQUV2RSxNQUFNLFNBQVMsZUFBYSxRQUFRLElBQVIsQ0FBYSxDQUFiLFNBQWIsRUFBbUMsT0FBbkMsQ0FGd0Q7QUFHdkUsTUFBSSxNQUFKLEVBQVksS0FBWixDQUFrQjtXQUFPLFFBQVEsS0FBUixDQUFjLElBQUksS0FBSjtHQUFyQixDQUFsQixDQUh1RTtDQUF6RTs7a0JBTWUiLCJmaWxlIjoicnVuLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBSZWFjdCBTdGFydGVyIEtpdCAoaHR0cHM6Ly93d3cucmVhY3RzdGFydGVya2l0LmNvbS8pXG4gKlxuICogQ29weXJpZ2h0IMKpIDIwMTQtMjAxNiBLcmlhc29mdCwgTExDLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICpcbiAqIFRoaXMgc291cmNlIGNvZGUgaXMgbGljZW5zZWQgdW5kZXIgdGhlIE1JVCBsaWNlbnNlIGZvdW5kIGluIHRoZVxuICogTElDRU5TRS50eHQgZmlsZSBpbiB0aGUgcm9vdCBkaXJlY3Rvcnkgb2YgdGhpcyBzb3VyY2UgdHJlZS5cbiAqL1xuXG5mdW5jdGlvbiBmb3JtYXQodGltZSkge1xuICByZXR1cm4gdGltZS50b1RpbWVTdHJpbmcoKS5yZXBsYWNlKC8uKihcXGR7Mn06XFxkezJ9OlxcZHsyfSkuKi8sICckMScpO1xufVxuXG5mdW5jdGlvbiBydW4oZm4sIG9wdGlvbnMpIHtcbiAgY29uc3QgdGFzayA9IHR5cGVvZiBmbi5kZWZhdWx0ID09PSAndW5kZWZpbmVkJyA/IGZuIDogZm4uZGVmYXVsdDtcbiAgY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZSgpO1xuICBjb25zb2xlLmxvZyhgWyR7Zm9ybWF0KHN0YXJ0KX1dIFN0YXJ0aW5nICcke3Rhc2submFtZX0nLi4uYCk7XG4gIHJldHVybiB0YXNrKG9wdGlvbnMpLnRoZW4oKCkgPT4ge1xuICAgIGNvbnN0IGVuZCA9IG5ldyBEYXRlKCk7XG4gICAgY29uc3QgdGltZSA9IGVuZC5nZXRUaW1lKCkgLSBzdGFydC5nZXRUaW1lKCk7XG4gICAgY29uc29sZS5sb2coYFske2Zvcm1hdChlbmQpfV0gRmluaXNoZWQgJyR7dGFzay5uYW1lfScgYWZ0ZXIgJHt0aW1lfSBtc2ApO1xuICB9KTtcbn1cblxuaWYgKHByb2Nlc3MubWFpbk1vZHVsZS5jaGlsZHJlbi5sZW5ndGggPT09IDAgJiYgcHJvY2Vzcy5hcmd2Lmxlbmd0aCA+IDIpIHtcbiAgZGVsZXRlIHJlcXVpcmUuY2FjaGVbX19maWxlbmFtZV07XG4gIGNvbnN0IG1vZHVsZSA9IHJlcXVpcmUoYC4vJHtwcm9jZXNzLmFyZ3ZbMl19LmpzYCkuZGVmYXVsdDtcbiAgcnVuKG1vZHVsZSkuY2F0Y2goZXJyID0+IGNvbnNvbGUuZXJyb3IoZXJyLnN0YWNrKSk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IHJ1bjtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "run.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;AASA,SAAS,MAAT,CAAgB,IAAhB,EAAsB;AACpB,SAAO,KAAK,YAAL,GAAoB,OAApB,CAA4B,yBAA5B,EAAuD,IAAvD,CAAP,CADoB;CAAtB;;AAIA,SAAS,GAAT,CAAa,EAAb,EAAiB,OAAjB,EAA0B;AACxB,MAAM,OAAO,OAAO,GAAG,OAAH,KAAe,WAAtB,GAAoC,EAApC,GAAyC,GAAG,OAAH,CAD9B;AAExB,MAAM,QAAQ,IAAI,IAAJ,EAAR,CAFkB;AAGxB,UAAQ,GAAR,OAAgB,OAAO,KAAP,sBAA4B,KAAK,IAAL,UAA5C,EAHwB;AAIxB,SAAO,KAAK,OAAL,EAAc,IAAd,CAAmB,YAAM;AAC9B,QAAM,MAAM,IAAI,IAAJ,EAAN,CADwB;AAE9B,QAAM,OAAO,IAAI,OAAJ,KAAgB,MAAM,OAAN,EAAhB,CAFiB;AAG9B,YAAQ,GAAR,OAAgB,OAAO,GAAP,sBAA0B,KAAK,IAAL,iBAAoB,YAA9D,EAH8B;GAAN,CAA1B,CAJwB;CAA1B;;AAWA,IAAI,QAAQ,UAAR,CAAmB,QAAnB,CAA4B,MAA5B,KAAuC,CAAvC,IAA4C,QAAQ,IAAR,CAAa,MAAb,GAAsB,CAAtB,EAAyB;AACvE,SAAO,QAAQ,KAAR,CAAc,UAAd,CAAP,CADuE;AAEvE,MAAM,SAAS,eAAa,QAAQ,IAAR,CAAa,CAAb,SAAb,EAAmC,OAAnC,CAFwD;AAGvE,MAAI,MAAJ,EAAY,KAAZ,CAAkB;WAAO,QAAQ,KAAR,CAAc,IAAI,KAAJ;GAArB,CAAlB,CAHuE;CAAzE;;kBAMe",
+      "file": "run.js",
+      "sourcesContent": [
+        "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nfunction format(time) {\n  return time.toTimeString().replace(/.*(\\d{2}:\\d{2}:\\d{2}).*/, '$1');\n}\n\nfunction run(fn, options) {\n  const task = typeof fn.default === 'undefined' ? fn : fn.default;\n  const start = new Date();\n  console.log(`[${format(start)}] Starting '${task.name}'...`);\n  return task(options).then(() => {\n    const end = new Date();\n    const time = end.getTime() - start.getTime();\n    console.log(`[${format(end)}] Finished '${task.name}' after ${time} ms`);\n  });\n}\n\nif (process.mainModule.children.length === 0 && process.argv.length > 2) {\n  delete require.cache[__filename];\n  const module = require(`./${process.argv[2]}.js`).default;\n  run(module).catch(err => console.error(err.stack));\n}\n\nexport default run;\n"
+      ]
+    },
+    "mtime": 1454267238000
+  },
+  "{\"filename\":\"/home/client_frontend/tools/start.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false}:6.4.5": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "toConsumableArray",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "browser-sync",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "Browsersync"
+              }
+            ]
+          },
+          {
+            "source": "webpack",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpack"
+              }
+            ]
+          },
+          {
+            "source": "webpack-middleware",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpackMiddleware"
+              }
+            ]
+          },
+          {
+            "source": "webpack-hot-middleware",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpackHotMiddleware"
+              }
+            ]
+          },
+          {
+            "source": "./run",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "run"
+              }
+            ]
+          },
+          {
+            "source": "./runServer",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "runServer"
+              }
+            ]
+          },
+          {
+            "source": "./webpack.config",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpackConfig"
+              }
+            ]
+          },
+          {
+            "source": "./clean",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "clean"
+              }
+            ]
+          },
+          {
+            "source": "./copy",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "copy"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/client_frontend/tools/start.js",
+      "filenameRelative": "/home/client_frontend/tools/start.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "start.js",
+      "sourceFileName": "start.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "basename": "start"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _regenerator = require('babel-runtime/regenerator');\n\nvar _regenerator2 = _interopRequireDefault(_regenerator);\n\nvar _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');\n\nvar _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);\n\nvar _promise = require('babel-runtime/core-js/promise');\n\nvar _promise2 = _interopRequireDefault(_promise);\n\nvar _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');\n\nvar _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _browserSync = require('browser-sync');\n\nvar _browserSync2 = _interopRequireDefault(_browserSync);\n\nvar _webpack = require('webpack');\n\nvar _webpack2 = _interopRequireDefault(_webpack);\n\nvar _webpackMiddleware = require('webpack-middleware');\n\nvar _webpackMiddleware2 = _interopRequireDefault(_webpackMiddleware);\n\nvar _webpackHotMiddleware = require('webpack-hot-middleware');\n\nvar _webpackHotMiddleware2 = _interopRequireDefault(_webpackHotMiddleware);\n\nvar _run = require('./run');\n\nvar _run2 = _interopRequireDefault(_run);\n\nvar _runServer = require('./runServer');\n\nvar _runServer2 = _interopRequireDefault(_runServer);\n\nvar _webpack3 = require('./webpack.config');\n\nvar _webpack4 = _interopRequireDefault(_webpack3);\n\nvar _clean = require('./clean');\n\nvar _clean2 = _interopRequireDefault(_clean);\n\nvar _copy = require('./copy');\n\nvar _copy2 = _interopRequireDefault(_copy);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\n * Launches a development web server with \"live reload\" functionality -\n * synchronizing URLs, interactions and code changes across multiple devices.\n */\n\nvar start = function () {\n  var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {\n    return _regenerator2.default.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return (0, _run2.default)(_clean2.default);\n\n          case 2:\n            _context.next = 4;\n            return (0, _run2.default)(_copy2.default.bind(undefined, { watch: true }));\n\n          case 4:\n            _context.next = 6;\n            return new _promise2.default(function (resolve) {\n              // Patch the client-side bundle configurations\n              // to enable Hot Module Replacement (HMR) and React Transform\n              _webpack4.default.filter(function (x) {\n                return x.target !== 'node';\n              }).forEach(function (config) {\n                if (Array.isArray(config.entry)) {\n                  config.entry.unshift('webpack-hot-middleware/client');\n                } else {\n                  /* eslint-disable no-param-reassign */\n                  config.entry = ['webpack-hot-middleware/client', config.entry];\n                  /* eslint-enable no-param-reassign */\n                }\n\n                config.plugins.push(new _webpack2.default.HotModuleReplacementPlugin());\n                config.plugins.push(new _webpack2.default.NoErrorsPlugin());\n                config.module.loaders.filter(function (x) {\n                  return x.loader === 'babel-loader';\n                }).forEach(function (x) {\n                  return x.query = { // eslint-disable-line no-param-reassign\n                    // Wraps all React components into arbitrary transforms\n                    // https://github.com/gaearon/babel-plugin-react-transform\n                    plugins: [['react-transform', {\n                      transforms: [{\n                        transform: 'react-transform-hmr',\n                        imports: ['react'],\n                        locals: ['module']\n                      }, {\n                        transform: 'react-transform-catch-errors',\n                        imports: ['react', 'redbox-react']\n                      }]\n                    }]]\n                  };\n                });\n              });\n\n              var bundler = (0, _webpack2.default)(_webpack4.default);\n              var wpMiddleware = (0, _webpackMiddleware2.default)(bundler, {\n\n                // IMPORTANT: webpack middleware can't access config,\n                // so we should provide publicPath by ourselves\n                publicPath: _webpack4.default[0].output.publicPath,\n\n                // Pretty colored output\n                stats: _webpack4.default[0].stats\n\n              });\n              // For other settings see\n              // https://webpack.github.io/docs/webpack-dev-middleware\n              var hotMiddlewares = bundler.compilers.filter(function (compiler) {\n                return compiler.options.target !== 'node';\n              }).map(function (compiler) {\n                return (0, _webpackHotMiddleware2.default)(compiler);\n              });\n\n              var _handleServerBundleComplete = function handleServerBundleComplete() {\n                (0, _runServer2.default)(function (err, host) {\n                  if (!err) {\n                    var bs = _browserSync2.default.create();\n                    bs.init({\n                      proxy: {\n                        target: host,\n                        middleware: [wpMiddleware].concat((0, _toConsumableArray3.default)(hotMiddlewares))\n                      },\n\n                      // no need to watch '*.js' here, webpack will take care of it for us,\n                      // including full page reloads if HMR won't work\n                      files: ['build/content/**/*.*']\n                    }, resolve);\n                    _handleServerBundleComplete = _runServer2.default;\n                  }\n                });\n              };\n\n              bundler.plugin('done', function () {\n                return _handleServerBundleComplete();\n              });\n            });\n\n          case 6:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n  return function start() {\n    return ref.apply(this, arguments);\n  };\n}(); /**\n      * React Starter Kit (https://www.reactstarterkit.com/)\n      *\n      * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n      *\n      * This source code is licensed under the MIT license found in the\n      * LICENSE.txt file in the root directory of this source tree.\n      */\n\nexports.default = start;\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0YXJ0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozt1RUF1QkE7Ozs7OzttQkFDUTs7OzttQkFDQSxtQkFBSSxlQUFLLElBQUwsQ0FBVSxTQUFWLEVBQXFCLEVBQUUsT0FBTyxJQUFQLEVBQXZCLENBQUo7Ozs7bUJBQ0Esc0JBQVksbUJBQVc7OztBQUczQixnQ0FBYyxNQUFkLENBQXFCO3VCQUFLLEVBQUUsTUFBRixLQUFhLE1BQWI7ZUFBTCxDQUFyQixDQUErQyxPQUEvQyxDQUF1RCxrQkFBVTtBQUMvRCxvQkFBSSxNQUFNLE9BQU4sQ0FBYyxPQUFPLEtBQVAsQ0FBbEIsRUFBaUM7QUFDL0IseUJBQU8sS0FBUCxDQUFhLE9BQWIsQ0FBcUIsK0JBQXJCLEVBRCtCO2lCQUFqQyxNQUVPOztBQUVMLHlCQUFPLEtBQVAsR0FBZSxDQUFDLCtCQUFELEVBQWtDLE9BQU8sS0FBUCxDQUFqRDs7QUFGSyxpQkFGUDs7QUFRQSx1QkFBTyxPQUFQLENBQWUsSUFBZixDQUFvQixJQUFJLGtCQUFRLDBCQUFSLEVBQXhCLEVBVCtEO0FBVS9ELHVCQUFPLE9BQVAsQ0FBZSxJQUFmLENBQW9CLElBQUksa0JBQVEsY0FBUixFQUF4QixFQVYrRDtBQVcvRCx1QkFBTyxNQUFQLENBQWMsT0FBZCxDQUNHLE1BREgsQ0FDVTt5QkFBSyxFQUFFLE1BQUYsS0FBYSxjQUFiO2lCQUFMLENBRFYsQ0FFRyxPQUZILENBRVc7eUJBQUssRUFBRSxLQUFGLEdBQVU7OztBQUd0Qiw2QkFBUyxDQUNQLENBQUMsaUJBQUQsRUFBb0I7QUFDbEIsa0NBQVksQ0FDVjtBQUNFLG1DQUFXLHFCQUFYO0FBQ0EsaUNBQVMsQ0FBQyxPQUFELENBQVQ7QUFDQSxnQ0FBUSxDQUFDLFFBQUQsQ0FBUjt1QkFKUSxFQUtQO0FBQ0QsbUNBQVcsOEJBQVg7QUFDQSxpQ0FBUyxDQUFDLE9BQUQsRUFBVSxjQUFWLENBQVQ7dUJBUFEsQ0FBWjtxQkFERixDQURPLENBQVQ7bUJBSFk7aUJBQUwsQ0FGWCxDQVgrRDtlQUFWLENBQXZELENBSDJCOztBQXFDM0Isa0JBQU0sVUFBVSx5Q0FBVixDQXJDcUI7QUFzQzNCLGtCQUFNLGVBQWUsaUNBQWtCLE9BQWxCLEVBQTJCOzs7O0FBSTlDLDRCQUFZLGtCQUFjLENBQWQsRUFBaUIsTUFBakIsQ0FBd0IsVUFBeEI7OztBQUdaLHVCQUFPLGtCQUFjLENBQWQsRUFBaUIsS0FBakI7O2VBUFksQ0FBZixDQXRDcUI7OztBQWtEM0Isa0JBQU0saUJBQWlCLFFBQVEsU0FBUixDQUNwQixNQURvQixDQUNiO3VCQUFZLFNBQVMsT0FBVCxDQUFpQixNQUFqQixLQUE0QixNQUE1QjtlQUFaLENBRGEsQ0FFcEIsR0FGb0IsQ0FFaEI7dUJBQVksb0NBQXFCLFFBQXJCO2VBQVosQ0FGRCxDQWxEcUI7O0FBc0QzQixrQkFBSSw4QkFBNkIsc0NBQU07QUFDckMseUNBQVUsVUFBQyxHQUFELEVBQU0sSUFBTixFQUFlO0FBQ3ZCLHNCQUFJLENBQUMsR0FBRCxFQUFNO0FBQ1Isd0JBQU0sS0FBSyxzQkFBWSxNQUFaLEVBQUwsQ0FERTtBQUVSLHVCQUFHLElBQUgsQ0FBUTtBQUNOLDZCQUFPO0FBQ0wsZ0NBQVEsSUFBUjtBQUNBLHFDQUFhLHNEQUFpQixnQkFBOUI7dUJBRkY7Ozs7QUFPQSw2QkFBTyxDQUFDLHNCQUFELENBQVA7cUJBUkYsRUFTRyxPQVRILEVBRlE7QUFZUixzRUFaUTttQkFBVjtpQkFEUSxDQUFWLENBRHFDO2VBQU4sQ0F0RE47O0FBeUUzQixzQkFBUSxNQUFSLENBQWUsTUFBZixFQUF1Qjt1QkFBTTtlQUFOLENBQXZCLENBekUyQjthQUFYOzs7Ozs7OztHQUhwQjtrQkFBZTs7Ozs7Ozs7Ozs7O2tCQWdGQSIsImZpbGUiOiJzdGFydC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVhY3QgU3RhcnRlciBLaXQgKGh0dHBzOi8vd3d3LnJlYWN0c3RhcnRlcmtpdC5jb20vKVxuICpcbiAqIENvcHlyaWdodCDCqSAyMDE0LTIwMTYgS3JpYXNvZnQsIExMQy4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqXG4gKiBUaGlzIHNvdXJjZSBjb2RlIGlzIGxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgbGljZW5zZSBmb3VuZCBpbiB0aGVcbiAqIExJQ0VOU0UudHh0IGZpbGUgaW4gdGhlIHJvb3QgZGlyZWN0b3J5IG9mIHRoaXMgc291cmNlIHRyZWUuXG4gKi9cblxuaW1wb3J0IEJyb3dzZXJzeW5jIGZyb20gJ2Jyb3dzZXItc3luYyc7XG5pbXBvcnQgd2VicGFjayBmcm9tICd3ZWJwYWNrJztcbmltcG9ydCB3ZWJwYWNrTWlkZGxld2FyZSBmcm9tICd3ZWJwYWNrLW1pZGRsZXdhcmUnO1xuaW1wb3J0IHdlYnBhY2tIb3RNaWRkbGV3YXJlIGZyb20gJ3dlYnBhY2staG90LW1pZGRsZXdhcmUnO1xuaW1wb3J0IHJ1biBmcm9tICcuL3J1bic7XG5pbXBvcnQgcnVuU2VydmVyIGZyb20gJy4vcnVuU2VydmVyJztcbmltcG9ydCB3ZWJwYWNrQ29uZmlnIGZyb20gJy4vd2VicGFjay5jb25maWcnO1xuaW1wb3J0IGNsZWFuIGZyb20gJy4vY2xlYW4nO1xuaW1wb3J0IGNvcHkgZnJvbSAnLi9jb3B5JztcblxuLyoqXG4gKiBMYXVuY2hlcyBhIGRldmVsb3BtZW50IHdlYiBzZXJ2ZXIgd2l0aCBcImxpdmUgcmVsb2FkXCIgZnVuY3Rpb25hbGl0eSAtXG4gKiBzeW5jaHJvbml6aW5nIFVSTHMsIGludGVyYWN0aW9ucyBhbmQgY29kZSBjaGFuZ2VzIGFjcm9zcyBtdWx0aXBsZSBkZXZpY2VzLlxuICovXG5hc3luYyBmdW5jdGlvbiBzdGFydCgpIHtcbiAgYXdhaXQgcnVuKGNsZWFuKTtcbiAgYXdhaXQgcnVuKGNvcHkuYmluZCh1bmRlZmluZWQsIHsgd2F0Y2g6IHRydWUgfSkpO1xuICBhd2FpdCBuZXcgUHJvbWlzZShyZXNvbHZlID0+IHtcbiAgICAvLyBQYXRjaCB0aGUgY2xpZW50LXNpZGUgYnVuZGxlIGNvbmZpZ3VyYXRpb25zXG4gICAgLy8gdG8gZW5hYmxlIEhvdCBNb2R1bGUgUmVwbGFjZW1lbnQgKEhNUikgYW5kIFJlYWN0IFRyYW5zZm9ybVxuICAgIHdlYnBhY2tDb25maWcuZmlsdGVyKHggPT4geC50YXJnZXQgIT09ICdub2RlJykuZm9yRWFjaChjb25maWcgPT4ge1xuICAgICAgaWYgKEFycmF5LmlzQXJyYXkoY29uZmlnLmVudHJ5KSkge1xuICAgICAgICBjb25maWcuZW50cnkudW5zaGlmdCgnd2VicGFjay1ob3QtbWlkZGxld2FyZS9jbGllbnQnKTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIC8qIGVzbGludC1kaXNhYmxlIG5vLXBhcmFtLXJlYXNzaWduICovXG4gICAgICAgIGNvbmZpZy5lbnRyeSA9IFsnd2VicGFjay1ob3QtbWlkZGxld2FyZS9jbGllbnQnLCBjb25maWcuZW50cnldO1xuICAgICAgICAvKiBlc2xpbnQtZW5hYmxlIG5vLXBhcmFtLXJlYXNzaWduICovXG4gICAgICB9XG5cbiAgICAgIGNvbmZpZy5wbHVnaW5zLnB1c2gobmV3IHdlYnBhY2suSG90TW9kdWxlUmVwbGFjZW1lbnRQbHVnaW4oKSk7XG4gICAgICBjb25maWcucGx1Z2lucy5wdXNoKG5ldyB3ZWJwYWNrLk5vRXJyb3JzUGx1Z2luKCkpO1xuICAgICAgY29uZmlnLm1vZHVsZS5sb2FkZXJzXG4gICAgICAgIC5maWx0ZXIoeCA9PiB4LmxvYWRlciA9PT0gJ2JhYmVsLWxvYWRlcicpXG4gICAgICAgIC5mb3JFYWNoKHggPT4geC5xdWVyeSA9IHsgLy8gZXNsaW50LWRpc2FibGUtbGluZSBuby1wYXJhbS1yZWFzc2lnblxuICAgICAgICAgIC8vIFdyYXBzIGFsbCBSZWFjdCBjb21wb25lbnRzIGludG8gYXJiaXRyYXJ5IHRyYW5zZm9ybXNcbiAgICAgICAgICAvLyBodHRwczovL2dpdGh1Yi5jb20vZ2FlYXJvbi9iYWJlbC1wbHVnaW4tcmVhY3QtdHJhbnNmb3JtXG4gICAgICAgICAgcGx1Z2luczogW1xuICAgICAgICAgICAgWydyZWFjdC10cmFuc2Zvcm0nLCB7XG4gICAgICAgICAgICAgIHRyYW5zZm9ybXM6IFtcbiAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICB0cmFuc2Zvcm06ICdyZWFjdC10cmFuc2Zvcm0taG1yJyxcbiAgICAgICAgICAgICAgICAgIGltcG9ydHM6IFsncmVhY3QnXSxcbiAgICAgICAgICAgICAgICAgIGxvY2FsczogWydtb2R1bGUnXSxcbiAgICAgICAgICAgICAgICB9LCB7XG4gICAgICAgICAgICAgICAgICB0cmFuc2Zvcm06ICdyZWFjdC10cmFuc2Zvcm0tY2F0Y2gtZXJyb3JzJyxcbiAgICAgICAgICAgICAgICAgIGltcG9ydHM6IFsncmVhY3QnLCAncmVkYm94LXJlYWN0J10sXG4gICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgXSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBdLFxuICAgICAgICAgIF0sXG4gICAgICAgIH0pO1xuICAgIH0pO1xuXG4gICAgY29uc3QgYnVuZGxlciA9IHdlYnBhY2sod2VicGFja0NvbmZpZyk7XG4gICAgY29uc3Qgd3BNaWRkbGV3YXJlID0gd2VicGFja01pZGRsZXdhcmUoYnVuZGxlciwge1xuXG4gICAgICAvLyBJTVBPUlRBTlQ6IHdlYnBhY2sgbWlkZGxld2FyZSBjYW4ndCBhY2Nlc3MgY29uZmlnLFxuICAgICAgLy8gc28gd2Ugc2hvdWxkIHByb3ZpZGUgcHVibGljUGF0aCBieSBvdXJzZWx2ZXNcbiAgICAgIHB1YmxpY1BhdGg6IHdlYnBhY2tDb25maWdbMF0ub3V0cHV0LnB1YmxpY1BhdGgsXG5cbiAgICAgIC8vIFByZXR0eSBjb2xvcmVkIG91dHB1dFxuICAgICAgc3RhdHM6IHdlYnBhY2tDb25maWdbMF0uc3RhdHMsXG5cbiAgICAgIC8vIEZvciBvdGhlciBzZXR0aW5ncyBzZWVcbiAgICAgIC8vIGh0dHBzOi8vd2VicGFjay5naXRodWIuaW8vZG9jcy93ZWJwYWNrLWRldi1taWRkbGV3YXJlXG4gICAgfSk7XG4gICAgY29uc3QgaG90TWlkZGxld2FyZXMgPSBidW5kbGVyLmNvbXBpbGVyc1xuICAgICAgLmZpbHRlcihjb21waWxlciA9PiBjb21waWxlci5vcHRpb25zLnRhcmdldCAhPT0gJ25vZGUnKVxuICAgICAgLm1hcChjb21waWxlciA9PiB3ZWJwYWNrSG90TWlkZGxld2FyZShjb21waWxlcikpO1xuXG4gICAgbGV0IGhhbmRsZVNlcnZlckJ1bmRsZUNvbXBsZXRlID0gKCkgPT4ge1xuICAgICAgcnVuU2VydmVyKChlcnIsIGhvc3QpID0+IHtcbiAgICAgICAgaWYgKCFlcnIpIHtcbiAgICAgICAgICBjb25zdCBicyA9IEJyb3dzZXJzeW5jLmNyZWF0ZSgpO1xuICAgICAgICAgIGJzLmluaXQoe1xuICAgICAgICAgICAgcHJveHk6IHtcbiAgICAgICAgICAgICAgdGFyZ2V0OiBob3N0LFxuICAgICAgICAgICAgICBtaWRkbGV3YXJlOiBbd3BNaWRkbGV3YXJlLCAuLi5ob3RNaWRkbGV3YXJlc10sXG4gICAgICAgICAgICB9LFxuXG4gICAgICAgICAgICAvLyBubyBuZWVkIHRvIHdhdGNoICcqLmpzJyBoZXJlLCB3ZWJwYWNrIHdpbGwgdGFrZSBjYXJlIG9mIGl0IGZvciB1cyxcbiAgICAgICAgICAgIC8vIGluY2x1ZGluZyBmdWxsIHBhZ2UgcmVsb2FkcyBpZiBITVIgd29uJ3Qgd29ya1xuICAgICAgICAgICAgZmlsZXM6IFsnYnVpbGQvY29udGVudC8qKi8qLionXSxcbiAgICAgICAgICB9LCByZXNvbHZlKTtcbiAgICAgICAgICBoYW5kbGVTZXJ2ZXJCdW5kbGVDb21wbGV0ZSA9IHJ1blNlcnZlcjtcbiAgICAgICAgfVxuICAgICAgfSk7XG4gICAgfTtcblxuICAgIGJ1bmRsZXIucGx1Z2luKCdkb25lJywgKCkgPT4gaGFuZGxlU2VydmVyQnVuZGxlQ29tcGxldGUoKSk7XG4gIH0pO1xufVxuXG5leHBvcnQgZGVmYXVsdCBzdGFydDtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "start.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;uEAuBA;;;;;;mBACQ;;;;mBACA,mBAAI,eAAK,IAAL,CAAU,SAAV,EAAqB,EAAE,OAAO,IAAP,EAAvB,CAAJ;;;;mBACA,sBAAY,mBAAW;;;AAG3B,gCAAc,MAAd,CAAqB;uBAAK,EAAE,MAAF,KAAa,MAAb;eAAL,CAArB,CAA+C,OAA/C,CAAuD,kBAAU;AAC/D,oBAAI,MAAM,OAAN,CAAc,OAAO,KAAP,CAAlB,EAAiC;AAC/B,yBAAO,KAAP,CAAa,OAAb,CAAqB,+BAArB,EAD+B;iBAAjC,MAEO;;AAEL,yBAAO,KAAP,GAAe,CAAC,+BAAD,EAAkC,OAAO,KAAP,CAAjD;;AAFK,iBAFP;;AAQA,uBAAO,OAAP,CAAe,IAAf,CAAoB,IAAI,kBAAQ,0BAAR,EAAxB,EAT+D;AAU/D,uBAAO,OAAP,CAAe,IAAf,CAAoB,IAAI,kBAAQ,cAAR,EAAxB,EAV+D;AAW/D,uBAAO,MAAP,CAAc,OAAd,CACG,MADH,CACU;yBAAK,EAAE,MAAF,KAAa,cAAb;iBAAL,CADV,CAEG,OAFH,CAEW;yBAAK,EAAE,KAAF,GAAU;;;AAGtB,6BAAS,CACP,CAAC,iBAAD,EAAoB;AAClB,kCAAY,CACV;AACE,mCAAW,qBAAX;AACA,iCAAS,CAAC,OAAD,CAAT;AACA,gCAAQ,CAAC,QAAD,CAAR;uBAJQ,EAKP;AACD,mCAAW,8BAAX;AACA,iCAAS,CAAC,OAAD,EAAU,cAAV,CAAT;uBAPQ,CAAZ;qBADF,CADO,CAAT;mBAHY;iBAAL,CAFX,CAX+D;eAAV,CAAvD,CAH2B;;AAqC3B,kBAAM,UAAU,yCAAV,CArCqB;AAsC3B,kBAAM,eAAe,iCAAkB,OAAlB,EAA2B;;;;AAI9C,4BAAY,kBAAc,CAAd,EAAiB,MAAjB,CAAwB,UAAxB;;;AAGZ,uBAAO,kBAAc,CAAd,EAAiB,KAAjB;;eAPY,CAAf,CAtCqB;;;AAkD3B,kBAAM,iBAAiB,QAAQ,SAAR,CACpB,MADoB,CACb;uBAAY,SAAS,OAAT,CAAiB,MAAjB,KAA4B,MAA5B;eAAZ,CADa,CAEpB,GAFoB,CAEhB;uBAAY,oCAAqB,QAArB;eAAZ,CAFD,CAlDqB;;AAsD3B,kBAAI,8BAA6B,sCAAM;AACrC,yCAAU,UAAC,GAAD,EAAM,IAAN,EAAe;AACvB,sBAAI,CAAC,GAAD,EAAM;AACR,wBAAM,KAAK,sBAAY,MAAZ,EAAL,CADE;AAER,uBAAG,IAAH,CAAQ;AACN,6BAAO;AACL,gCAAQ,IAAR;AACA,qCAAa,sDAAiB,gBAA9B;uBAFF;;;;AAOA,6BAAO,CAAC,sBAAD,CAAP;qBARF,EASG,OATH,EAFQ;AAYR,sEAZQ;mBAAV;iBADQ,CAAV,CADqC;eAAN,CAtDN;;AAyE3B,sBAAQ,MAAR,CAAe,MAAf,EAAuB;uBAAM;eAAN,CAAvB,CAzE2B;aAAX;;;;;;;;GAHpB;kBAAe;;;;;;;;;;;;kBAgFA",
+      "file": "start.js",
+      "sourcesContent": [
+        "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nimport Browsersync from 'browser-sync';\nimport webpack from 'webpack';\nimport webpackMiddleware from 'webpack-middleware';\nimport webpackHotMiddleware from 'webpack-hot-middleware';\nimport run from './run';\nimport runServer from './runServer';\nimport webpackConfig from './webpack.config';\nimport clean from './clean';\nimport copy from './copy';\n\n/**\n * Launches a development web server with \"live reload\" functionality -\n * synchronizing URLs, interactions and code changes across multiple devices.\n */\nasync function start() {\n  await run(clean);\n  await run(copy.bind(undefined, { watch: true }));\n  await new Promise(resolve => {\n    // Patch the client-side bundle configurations\n    // to enable Hot Module Replacement (HMR) and React Transform\n    webpackConfig.filter(x => x.target !== 'node').forEach(config => {\n      if (Array.isArray(config.entry)) {\n        config.entry.unshift('webpack-hot-middleware/client');\n      } else {\n        /* eslint-disable no-param-reassign */\n        config.entry = ['webpack-hot-middleware/client', config.entry];\n        /* eslint-enable no-param-reassign */\n      }\n\n      config.plugins.push(new webpack.HotModuleReplacementPlugin());\n      config.plugins.push(new webpack.NoErrorsPlugin());\n      config.module.loaders\n        .filter(x => x.loader === 'babel-loader')\n        .forEach(x => x.query = { // eslint-disable-line no-param-reassign\n          // Wraps all React components into arbitrary transforms\n          // https://github.com/gaearon/babel-plugin-react-transform\n          plugins: [\n            ['react-transform', {\n              transforms: [\n                {\n                  transform: 'react-transform-hmr',\n                  imports: ['react'],\n                  locals: ['module'],\n                }, {\n                  transform: 'react-transform-catch-errors',\n                  imports: ['react', 'redbox-react'],\n                },\n              ],\n            },\n            ],\n          ],\n        });\n    });\n\n    const bundler = webpack(webpackConfig);\n    const wpMiddleware = webpackMiddleware(bundler, {\n\n      // IMPORTANT: webpack middleware can't access config,\n      // so we should provide publicPath by ourselves\n      publicPath: webpackConfig[0].output.publicPath,\n\n      // Pretty colored output\n      stats: webpackConfig[0].stats,\n\n      // For other settings see\n      // https://webpack.github.io/docs/webpack-dev-middleware\n    });\n    const hotMiddlewares = bundler.compilers\n      .filter(compiler => compiler.options.target !== 'node')\n      .map(compiler => webpackHotMiddleware(compiler));\n\n    let handleServerBundleComplete = () => {\n      runServer((err, host) => {\n        if (!err) {\n          const bs = Browsersync.create();\n          bs.init({\n            proxy: {\n              target: host,\n              middleware: [wpMiddleware, ...hotMiddlewares],\n            },\n\n            // no need to watch '*.js' here, webpack will take care of it for us,\n            // including full page reloads if HMR won't work\n            files: ['build/content/**/*.*'],\n          }, resolve);\n          handleServerBundleComplete = runServer;\n        }\n      });\n    };\n\n    bundler.plugin('done', () => handleServerBundleComplete());\n  });\n}\n\nexport default start;\n"
+      ]
+    },
+    "mtime": 1454519773000
+  },
+  "{\"filename\":\"/home/client_frontend/tools/runServer.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false}:6.4.5": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "child_process",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "cp"
+              }
+            ]
+          },
+          {
+            "source": "./webpack.config",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpackConfig"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/client_frontend/tools/runServer.js",
+      "filenameRelative": "/home/client_frontend/tools/runServer.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "runServer.js",
+      "sourceFileName": "runServer.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "basename": "runServer"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _assign = require('babel-runtime/core-js/object/assign');\n\nvar _assign2 = _interopRequireDefault(_assign);\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _child_process = require('child_process');\n\nvar _child_process2 = _interopRequireDefault(_child_process);\n\nvar _webpack = require('./webpack.config');\n\nvar _webpack2 = _interopRequireDefault(_webpack);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Should match the text string used in `src/server.js/server.listen(...)`\nvar RUNNING_REGEXP = /The server is running at http:\\/\\/(.*?)\\//; /**\n                                                                   * React Starter Kit (https://www.reactstarterkit.com/)\n                                                                   *\n                                                                   * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n                                                                   *\n                                                                   * This source code is licensed under the MIT license found in the\n                                                                   * LICENSE.txt file in the root directory of this source tree.\n                                                                   */\n\nvar server = undefined;\n\nvar _webpackConfig$find = _webpack2.default.find(function (x) {\n  return x.target === 'node';\n});\n\nvar output = _webpackConfig$find.output;\n\nvar serverPath = _path2.default.join(output.path, output.filename);\n\n// Launch or restart the Node.js server\nfunction runServer(cb) {\n  function onStdOut(data) {\n    var time = new Date().toTimeString();\n    var match = data.toString('utf8').match(RUNNING_REGEXP);\n\n    process.stdout.write(time.replace(/.*(\\d{2}:\\d{2}:\\d{2}).*/, '[$1] '));\n    process.stdout.write(data);\n\n    if (match) {\n      server.stdout.removeListener('data', onStdOut);\n      server.stdout.on('data', function (x) {\n        return process.stdout.write(x);\n      });\n      if (cb) {\n        cb(null, match[1]);\n      }\n    }\n  }\n\n  if (server) {\n    server.kill('SIGTERM');\n  }\n\n  server = _child_process2.default.spawn('node', [serverPath], {\n    env: (0, _assign2.default)({ NODE_ENV: 'development' }, process.env),\n    silent: false\n  });\n\n  server.stdout.on('data', onStdOut);\n  server.stderr.on('data', function (x) {\n    return process.stderr.write(x);\n  });\n}\n\nprocess.on('exit', function () {\n  if (server) {\n    server.kill('SIGTERM');\n  }\n});\n\nexports.default = runServer;\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ1blNlcnZlci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBY0EsSUFBTSxpQkFBaUIsMkNBQWpCOzs7Ozs7Ozs7QUFFTixJQUFJLGtCQUFKOzswQkFDbUIsa0JBQWMsSUFBZCxDQUFtQjtTQUFLLEVBQUUsTUFBRixLQUFhLE1BQWI7Q0FBTDs7SUFBOUI7O0FBQ1IsSUFBTSxhQUFhLGVBQUssSUFBTCxDQUFVLE9BQU8sSUFBUCxFQUFhLE9BQU8sUUFBUCxDQUFwQzs7O0FBR04sU0FBUyxTQUFULENBQW1CLEVBQW5CLEVBQXVCO0FBQ3JCLFdBQVMsUUFBVCxDQUFrQixJQUFsQixFQUF3QjtBQUN0QixRQUFNLE9BQU8sSUFBSSxJQUFKLEdBQVcsWUFBWCxFQUFQLENBRGdCO0FBRXRCLFFBQU0sUUFBUSxLQUFLLFFBQUwsQ0FBYyxNQUFkLEVBQXNCLEtBQXRCLENBQTRCLGNBQTVCLENBQVIsQ0FGZ0I7O0FBSXRCLFlBQVEsTUFBUixDQUFlLEtBQWYsQ0FBcUIsS0FBSyxPQUFMLENBQWEseUJBQWIsRUFBd0MsT0FBeEMsQ0FBckIsRUFKc0I7QUFLdEIsWUFBUSxNQUFSLENBQWUsS0FBZixDQUFxQixJQUFyQixFQUxzQjs7QUFPdEIsUUFBSSxLQUFKLEVBQVc7QUFDVCxhQUFPLE1BQVAsQ0FBYyxjQUFkLENBQTZCLE1BQTdCLEVBQXFDLFFBQXJDLEVBRFM7QUFFVCxhQUFPLE1BQVAsQ0FBYyxFQUFkLENBQWlCLE1BQWpCLEVBQXlCO2VBQUssUUFBUSxNQUFSLENBQWUsS0FBZixDQUFxQixDQUFyQjtPQUFMLENBQXpCLENBRlM7QUFHVCxVQUFJLEVBQUosRUFBUTtBQUNOLFdBQUcsSUFBSCxFQUFTLE1BQU0sQ0FBTixDQUFULEVBRE07T0FBUjtLQUhGO0dBUEY7O0FBZ0JBLE1BQUksTUFBSixFQUFZO0FBQ1YsV0FBTyxJQUFQLENBQVksU0FBWixFQURVO0dBQVo7O0FBSUEsV0FBUyx3QkFBRyxLQUFILENBQVMsTUFBVCxFQUFpQixDQUFDLFVBQUQsQ0FBakIsRUFBK0I7QUFDdEMsU0FBSyxzQkFBYyxFQUFFLFVBQVUsYUFBVixFQUFoQixFQUEyQyxRQUFRLEdBQVIsQ0FBaEQ7QUFDQSxZQUFRLEtBQVI7R0FGTyxDQUFULENBckJxQjs7QUEwQnJCLFNBQU8sTUFBUCxDQUFjLEVBQWQsQ0FBaUIsTUFBakIsRUFBeUIsUUFBekIsRUExQnFCO0FBMkJyQixTQUFPLE1BQVAsQ0FBYyxFQUFkLENBQWlCLE1BQWpCLEVBQXlCO1dBQUssUUFBUSxNQUFSLENBQWUsS0FBZixDQUFxQixDQUFyQjtHQUFMLENBQXpCLENBM0JxQjtDQUF2Qjs7QUE4QkEsUUFBUSxFQUFSLENBQVcsTUFBWCxFQUFtQixZQUFNO0FBQ3ZCLE1BQUksTUFBSixFQUFZO0FBQ1YsV0FBTyxJQUFQLENBQVksU0FBWixFQURVO0dBQVo7Q0FEaUIsQ0FBbkI7O2tCQU1lIiwiZmlsZSI6InJ1blNlcnZlci5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVhY3QgU3RhcnRlciBLaXQgKGh0dHBzOi8vd3d3LnJlYWN0c3RhcnRlcmtpdC5jb20vKVxuICpcbiAqIENvcHlyaWdodCDCqSAyMDE0LTIwMTYgS3JpYXNvZnQsIExMQy4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqXG4gKiBUaGlzIHNvdXJjZSBjb2RlIGlzIGxpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgbGljZW5zZSBmb3VuZCBpbiB0aGVcbiAqIExJQ0VOU0UudHh0IGZpbGUgaW4gdGhlIHJvb3QgZGlyZWN0b3J5IG9mIHRoaXMgc291cmNlIHRyZWUuXG4gKi9cblxuaW1wb3J0IHBhdGggZnJvbSAncGF0aCc7XG5pbXBvcnQgY3AgZnJvbSAnY2hpbGRfcHJvY2Vzcyc7XG5pbXBvcnQgd2VicGFja0NvbmZpZyBmcm9tICcuL3dlYnBhY2suY29uZmlnJztcblxuLy8gU2hvdWxkIG1hdGNoIHRoZSB0ZXh0IHN0cmluZyB1c2VkIGluIGBzcmMvc2VydmVyLmpzL3NlcnZlci5saXN0ZW4oLi4uKWBcbmNvbnN0IFJVTk5JTkdfUkVHRVhQID0gL1RoZSBzZXJ2ZXIgaXMgcnVubmluZyBhdCBodHRwOlxcL1xcLyguKj8pXFwvLztcblxubGV0IHNlcnZlcjtcbmNvbnN0IHsgb3V0cHV0IH0gPSB3ZWJwYWNrQ29uZmlnLmZpbmQoeCA9PiB4LnRhcmdldCA9PT0gJ25vZGUnKTtcbmNvbnN0IHNlcnZlclBhdGggPSBwYXRoLmpvaW4ob3V0cHV0LnBhdGgsIG91dHB1dC5maWxlbmFtZSk7XG5cbi8vIExhdW5jaCBvciByZXN0YXJ0IHRoZSBOb2RlLmpzIHNlcnZlclxuZnVuY3Rpb24gcnVuU2VydmVyKGNiKSB7XG4gIGZ1bmN0aW9uIG9uU3RkT3V0KGRhdGEpIHtcbiAgICBjb25zdCB0aW1lID0gbmV3IERhdGUoKS50b1RpbWVTdHJpbmcoKTtcbiAgICBjb25zdCBtYXRjaCA9IGRhdGEudG9TdHJpbmcoJ3V0ZjgnKS5tYXRjaChSVU5OSU5HX1JFR0VYUCk7XG5cbiAgICBwcm9jZXNzLnN0ZG91dC53cml0ZSh0aW1lLnJlcGxhY2UoLy4qKFxcZHsyfTpcXGR7Mn06XFxkezJ9KS4qLywgJ1skMV0gJykpO1xuICAgIHByb2Nlc3Muc3Rkb3V0LndyaXRlKGRhdGEpO1xuXG4gICAgaWYgKG1hdGNoKSB7XG4gICAgICBzZXJ2ZXIuc3Rkb3V0LnJlbW92ZUxpc3RlbmVyKCdkYXRhJywgb25TdGRPdXQpO1xuICAgICAgc2VydmVyLnN0ZG91dC5vbignZGF0YScsIHggPT4gcHJvY2Vzcy5zdGRvdXQud3JpdGUoeCkpO1xuICAgICAgaWYgKGNiKSB7XG4gICAgICAgIGNiKG51bGwsIG1hdGNoWzFdKTtcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICBpZiAoc2VydmVyKSB7XG4gICAgc2VydmVyLmtpbGwoJ1NJR1RFUk0nKTtcbiAgfVxuXG4gIHNlcnZlciA9IGNwLnNwYXduKCdub2RlJywgW3NlcnZlclBhdGhdLCB7XG4gICAgZW52OiBPYmplY3QuYXNzaWduKHsgTk9ERV9FTlY6ICdkZXZlbG9wbWVudCcgfSwgcHJvY2Vzcy5lbnYpLFxuICAgIHNpbGVudDogZmFsc2UsXG4gIH0pO1xuXG4gIHNlcnZlci5zdGRvdXQub24oJ2RhdGEnLCBvblN0ZE91dCk7XG4gIHNlcnZlci5zdGRlcnIub24oJ2RhdGEnLCB4ID0+IHByb2Nlc3Muc3RkZXJyLndyaXRlKHgpKTtcbn1cblxucHJvY2Vzcy5vbignZXhpdCcsICgpID0+IHtcbiAgaWYgKHNlcnZlcikge1xuICAgIHNlcnZlci5raWxsKCdTSUdURVJNJyk7XG4gIH1cbn0pO1xuXG5leHBvcnQgZGVmYXVsdCBydW5TZXJ2ZXI7XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "runServer.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;AAcA,IAAM,iBAAiB,2CAAjB;;;;;;;;;AAEN,IAAI,kBAAJ;;0BACmB,kBAAc,IAAd,CAAmB;SAAK,EAAE,MAAF,KAAa,MAAb;CAAL;;IAA9B;;AACR,IAAM,aAAa,eAAK,IAAL,CAAU,OAAO,IAAP,EAAa,OAAO,QAAP,CAApC;;;AAGN,SAAS,SAAT,CAAmB,EAAnB,EAAuB;AACrB,WAAS,QAAT,CAAkB,IAAlB,EAAwB;AACtB,QAAM,OAAO,IAAI,IAAJ,GAAW,YAAX,EAAP,CADgB;AAEtB,QAAM,QAAQ,KAAK,QAAL,CAAc,MAAd,EAAsB,KAAtB,CAA4B,cAA5B,CAAR,CAFgB;;AAItB,YAAQ,MAAR,CAAe,KAAf,CAAqB,KAAK,OAAL,CAAa,yBAAb,EAAwC,OAAxC,CAArB,EAJsB;AAKtB,YAAQ,MAAR,CAAe,KAAf,CAAqB,IAArB,EALsB;;AAOtB,QAAI,KAAJ,EAAW;AACT,aAAO,MAAP,CAAc,cAAd,CAA6B,MAA7B,EAAqC,QAArC,EADS;AAET,aAAO,MAAP,CAAc,EAAd,CAAiB,MAAjB,EAAyB;eAAK,QAAQ,MAAR,CAAe,KAAf,CAAqB,CAArB;OAAL,CAAzB,CAFS;AAGT,UAAI,EAAJ,EAAQ;AACN,WAAG,IAAH,EAAS,MAAM,CAAN,CAAT,EADM;OAAR;KAHF;GAPF;;AAgBA,MAAI,MAAJ,EAAY;AACV,WAAO,IAAP,CAAY,SAAZ,EADU;GAAZ;;AAIA,WAAS,wBAAG,KAAH,CAAS,MAAT,EAAiB,CAAC,UAAD,CAAjB,EAA+B;AACtC,SAAK,sBAAc,EAAE,UAAU,aAAV,EAAhB,EAA2C,QAAQ,GAAR,CAAhD;AACA,YAAQ,KAAR;GAFO,CAAT,CArBqB;;AA0BrB,SAAO,MAAP,CAAc,EAAd,CAAiB,MAAjB,EAAyB,QAAzB,EA1BqB;AA2BrB,SAAO,MAAP,CAAc,EAAd,CAAiB,MAAjB,EAAyB;WAAK,QAAQ,MAAR,CAAe,KAAf,CAAqB,CAArB;GAAL,CAAzB,CA3BqB;CAAvB;;AA8BA,QAAQ,EAAR,CAAW,MAAX,EAAmB,YAAM;AACvB,MAAI,MAAJ,EAAY;AACV,WAAO,IAAP,CAAY,SAAZ,EADU;GAAZ;CADiB,CAAnB;;kBAMe",
+      "file": "runServer.js",
+      "sourcesContent": [
+        "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nimport path from 'path';\nimport cp from 'child_process';\nimport webpackConfig from './webpack.config';\n\n// Should match the text string used in `src/server.js/server.listen(...)`\nconst RUNNING_REGEXP = /The server is running at http:\\/\\/(.*?)\\//;\n\nlet server;\nconst { output } = webpackConfig.find(x => x.target === 'node');\nconst serverPath = path.join(output.path, output.filename);\n\n// Launch or restart the Node.js server\nfunction runServer(cb) {\n  function onStdOut(data) {\n    const time = new Date().toTimeString();\n    const match = data.toString('utf8').match(RUNNING_REGEXP);\n\n    process.stdout.write(time.replace(/.*(\\d{2}:\\d{2}:\\d{2}).*/, '[$1] '));\n    process.stdout.write(data);\n\n    if (match) {\n      server.stdout.removeListener('data', onStdOut);\n      server.stdout.on('data', x => process.stdout.write(x));\n      if (cb) {\n        cb(null, match[1]);\n      }\n    }\n  }\n\n  if (server) {\n    server.kill('SIGTERM');\n  }\n\n  server = cp.spawn('node', [serverPath], {\n    env: Object.assign({ NODE_ENV: 'development' }, process.env),\n    silent: false,\n  });\n\n  server.stdout.on('data', onStdOut);\n  server.stderr.on('data', x => process.stderr.write(x));\n}\n\nprocess.on('exit', () => {\n  if (server) {\n    server.kill('SIGTERM');\n  }\n});\n\nexport default runServer;\n"
+      ]
+    },
+    "mtime": 1451415398000
+  },
+  "{\"filename\":\"/home/client_frontend/tools/webpack.config.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false}:6.4.5": {
+    "metadata": {
+      "usedHelpers": [
+        "toConsumableArray",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "webpack",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpack"
+              }
+            ]
+          },
+          {
+            "source": "extend",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "extend"
+              }
+            ]
+          },
+          {
+            "source": "assets-webpack-plugin",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "AssetsPlugin"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/client_frontend/tools/webpack.config.js",
+      "filenameRelative": "/home/client_frontend/tools/webpack.config.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "webpack.config.js",
+      "sourceFileName": "webpack.config.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "basename": "webpack.config"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _stringify = require('babel-runtime/core-js/json/stringify');\n\nvar _stringify2 = _interopRequireDefault(_stringify);\n\nvar _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');\n\nvar _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _webpack = require('webpack');\n\nvar _webpack2 = _interopRequireDefault(_webpack);\n\nvar _extend = require('extend');\n\nvar _extend2 = _interopRequireDefault(_extend);\n\nvar _assetsWebpackPlugin = require('assets-webpack-plugin');\n\nvar _assetsWebpackPlugin2 = _interopRequireDefault(_assetsWebpackPlugin);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nvar DEBUG = !process.argv.includes('--release');\nvar VERBOSE = process.argv.includes('--verbose');\nvar AUTOPREFIXER_BROWSERS = ['Android 2.3', 'Android >= 4', 'Chrome >= 35', 'Firefox >= 31', 'Explorer >= 9', 'iOS >= 7', 'Opera >= 12', 'Safari >= 7.1'];\nvar GLOBALS = {\n  'process.env.NODE_ENV': DEBUG ? '\"development\"' : '\"production\"',\n  __DEV__: DEBUG\n};\n\n//\n// Common configuration chunk to be used for both\n// client-side (client.js) and server-side (server.js) bundles\n// -----------------------------------------------------------------------------\n\nvar config = {\n  output: {\n    publicPath: '/',\n    sourcePrefix: '  '\n  },\n\n  cache: DEBUG,\n  debug: DEBUG,\n\n  stats: {\n    colors: true,\n    reasons: DEBUG,\n    hash: VERBOSE,\n    version: VERBOSE,\n    timings: true,\n    chunks: VERBOSE,\n    chunkModules: VERBOSE,\n    cached: VERBOSE,\n    cachedAssets: VERBOSE\n  },\n\n  plugins: [new _webpack2.default.optimize.OccurenceOrderPlugin()],\n\n  resolve: {\n    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.json']\n  },\n\n  module: {\n    loaders: [{\n      test: /\\.jsx?$/,\n      include: [_path2.default.resolve(__dirname, '../node_modules/react-routing/src'), _path2.default.resolve(__dirname, '../src')],\n      loader: 'babel-loader'\n    }, {\n      test: /\\.scss$/,\n      loaders: ['isomorphic-style-loader', 'css-loader?' + (DEBUG ? 'sourceMap&' : 'minimize&') + 'modules&localIdentName=' + ('' + (DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]')), 'postcss-loader?parser=postcss-scss']\n    }, {\n      test: /\\.json$/,\n      loader: 'json-loader'\n    }, {\n      test: /\\.txt$/,\n      loader: 'raw-loader'\n    }, {\n      test: /\\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,\n      loader: 'url-loader?limit=10000'\n    }, {\n      test: /\\.(eot|ttf|wav|mp3)$/,\n      loader: 'file-loader'\n    }]\n  },\n\n  postcss: function plugins(bundler) {\n    return [require('postcss-import')({ addDependencyTo: bundler }), require('precss')(), require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS })];\n  }\n};\n\n//\n// Configuration for the client-side bundle (client.js)\n// -----------------------------------------------------------------------------\n\nvar clientConfig = (0, _extend2.default)(true, {}, config, {\n  entry: './src/client.js',\n  output: {\n    path: _path2.default.join(__dirname, '../build/public'),\n    filename: DEBUG ? '[name].js?[hash]' : '[name].[hash].js'\n  },\n\n  // Choose a developer tool to enhance debugging\n  // http://webpack.github.io/docs/configuration.html#devtool\n  devtool: DEBUG ? 'cheap-module-eval-source-map' : false,\n  plugins: [new _webpack2.default.DefinePlugin(GLOBALS), new _assetsWebpackPlugin2.default({\n    path: _path2.default.join(__dirname, '../build'),\n    filename: 'assets.js',\n    processOutput: function processOutput(x) {\n      return 'module.exports = ' + (0, _stringify2.default)(x) + ';';\n    }\n  })].concat((0, _toConsumableArray3.default)(!DEBUG ? [new _webpack2.default.optimize.DedupePlugin(), new _webpack2.default.optimize.UglifyJsPlugin({\n    compress: {\n      // jscs:disable requireCamelCaseOrUpperCaseIdentifiers\n      screw_ie8: true,\n\n      // jscs:enable requireCamelCaseOrUpperCaseIdentifiers\n      warnings: VERBOSE\n    }\n  }), new _webpack2.default.optimize.AggressiveMergingPlugin()] : []))\n});\n\n//\n// Configuration for the server-side bundle (server.js)\n// -----------------------------------------------------------------------------\n\nvar serverConfig = (0, _extend2.default)(true, {}, config, {\n  entry: './src/server.js',\n  output: {\n    path: './build',\n    filename: 'server.js',\n    libraryTarget: 'commonjs2'\n  },\n  target: 'node',\n  externals: [/^\\.\\/assets$/, function filter(context, request, cb) {\n    var isExternal = request.match(/^[@a-z][a-z\\/\\.\\-0-9]*$/i) && !request.match(/^react-routing/) && !context.match(/[\\\\/]react-routing/);\n    cb(null, Boolean(isExternal));\n  }],\n  node: {\n    console: false,\n    global: false,\n    process: false,\n    Buffer: false,\n    __filename: false,\n    __dirname: false\n  },\n  devtool: 'source-map',\n  plugins: [new _webpack2.default.DefinePlugin(GLOBALS), new _webpack2.default.BannerPlugin('require(\"source-map-support\").install();', { raw: true, entryOnly: false })]\n});\n\nexports.default = [clientConfig, serverConfig];\n//# sourceMappingURL=data:application/json;base64,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VyxXQUFXLEtBQVgsRUFEZixDQUZPLENBQVQ7Q0EzQm1CLENBQWY7O2tCQWtDUyxDQUFDLFlBQUQsRUFBZSxZQUFmIiwiZmlsZSI6IndlYnBhY2suY29uZmlnLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBSZWFjdCBTdGFydGVyIEtpdCAoaHR0cHM6Ly93d3cucmVhY3RzdGFydGVya2l0LmNvbS8pXG4gKlxuICogQ29weXJpZ2h0IMKpIDIwMTQtMjAxNiBLcmlhc29mdCwgTExDLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICpcbiAqIFRoaXMgc291cmNlIGNvZGUgaXMgbGljZW5zZWQgdW5kZXIgdGhlIE1JVCBsaWNlbnNlIGZvdW5kIGluIHRoZVxuICogTElDRU5TRS50eHQgZmlsZSBpbiB0aGUgcm9vdCBkaXJlY3Rvcnkgb2YgdGhpcyBzb3VyY2UgdHJlZS5cbiAqL1xuXG5pbXBvcnQgcGF0aCBmcm9tICdwYXRoJztcbmltcG9ydCB3ZWJwYWNrIGZyb20gJ3dlYnBhY2snO1xuaW1wb3J0IGV4dGVuZCBmcm9tICdleHRlbmQnO1xuaW1wb3J0IEFzc2V0c1BsdWdpbiBmcm9tICdhc3NldHMtd2VicGFjay1wbHVnaW4nO1xuXG5jb25zdCBERUJVRyA9ICFwcm9jZXNzLmFyZ3YuaW5jbHVkZXMoJy0tcmVsZWFzZScpO1xuY29uc3QgVkVSQk9TRSA9IHByb2Nlc3MuYXJndi5pbmNsdWRlcygnLS12ZXJib3NlJyk7XG5jb25zdCBBVVRPUFJFRklYRVJfQlJPV1NFUlMgPSBbXG4gICdBbmRyb2lkIDIuMycsXG4gICdBbmRyb2lkID49IDQnLFxuICAnQ2hyb21lID49IDM1JyxcbiAgJ0ZpcmVmb3ggPj0gMzEnLFxuICAnRXhwbG9yZXIgPj0gOScsXG4gICdpT1MgPj0gNycsXG4gICdPcGVyYSA+PSAxMicsXG4gICdTYWZhcmkgPj0gNy4xJyxcbl07XG5jb25zdCBHTE9CQUxTID0ge1xuICAncHJvY2Vzcy5lbnYuTk9ERV9FTlYnOiBERUJVRyA/ICdcImRldmVsb3BtZW50XCInIDogJ1wicHJvZHVjdGlvblwiJyxcbiAgX19ERVZfXzogREVCVUcsXG59O1xuXG4vL1xuLy8gQ29tbW9uIGNvbmZpZ3VyYXRpb24gY2h1bmsgdG8gYmUgdXNlZCBmb3IgYm90aFxuLy8gY2xpZW50LXNpZGUgKGNsaWVudC5qcykgYW5kIHNlcnZlci1zaWRlIChzZXJ2ZXIuanMpIGJ1bmRsZXNcbi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbmNvbnN0IGNvbmZpZyA9IHtcbiAgb3V0cHV0OiB7XG4gICAgcHVibGljUGF0aDogJy8nLFxuICAgIHNvdXJjZVByZWZpeDogJyAgJyxcbiAgfSxcblxuICBjYWNoZTogREVCVUcsXG4gIGRlYnVnOiBERUJVRyxcblxuICBzdGF0czoge1xuICAgIGNvbG9yczogdHJ1ZSxcbiAgICByZWFzb25zOiBERUJVRyxcbiAgICBoYXNoOiBWRVJCT1NFLFxuICAgIHZlcnNpb246IFZFUkJPU0UsXG4gICAgdGltaW5nczogdHJ1ZSxcbiAgICBjaHVua3M6IFZFUkJPU0UsXG4gICAgY2h1bmtNb2R1bGVzOiBWRVJCT1NFLFxuICAgIGNhY2hlZDogVkVSQk9TRSxcbiAgICBjYWNoZWRBc3NldHM6IFZFUkJPU0UsXG4gIH0sXG5cbiAgcGx1Z2luczogW1xuICAgIG5ldyB3ZWJwYWNrLm9wdGltaXplLk9jY3VyZW5jZU9yZGVyUGx1Z2luKCksXG4gIF0sXG5cbiAgcmVzb2x2ZToge1xuICAgIGV4dGVuc2lvbnM6IFsnJywgJy53ZWJwYWNrLmpzJywgJy53ZWIuanMnLCAnLmpzJywgJy5qc3gnLCAnLmpzb24nXSxcbiAgfSxcblxuICBtb2R1bGU6IHtcbiAgICBsb2FkZXJzOiBbXG4gICAgICB7XG4gICAgICAgIHRlc3Q6IC9cXC5qc3g/JC8sXG4gICAgICAgIGluY2x1ZGU6IFtcbiAgICAgICAgICBwYXRoLnJlc29sdmUoX19kaXJuYW1lLCAnLi4vbm9kZV9tb2R1bGVzL3JlYWN0LXJvdXRpbmcvc3JjJyksXG4gICAgICAgICAgcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgJy4uL3NyYycpLFxuICAgICAgICBdLFxuICAgICAgICBsb2FkZXI6ICdiYWJlbC1sb2FkZXInLFxuICAgICAgfSwge1xuICAgICAgICB0ZXN0OiAvXFwuc2NzcyQvLFxuICAgICAgICBsb2FkZXJzOiBbXG4gICAgICAgICAgJ2lzb21vcnBoaWMtc3R5bGUtbG9hZGVyJyxcbiAgICAgICAgICBgY3NzLWxvYWRlcj8ke0RFQlVHID8gJ3NvdXJjZU1hcCYnIDogJ21pbmltaXplJid9bW9kdWxlcyZsb2NhbElkZW50TmFtZT1gICtcbiAgICAgICAgICBgJHtERUJVRyA/ICdbbmFtZV1fW2xvY2FsXV9baGFzaDpiYXNlNjQ6M10nIDogJ1toYXNoOmJhc2U2NDo0XSd9YCxcbiAgICAgICAgICAncG9zdGNzcy1sb2FkZXI/cGFyc2VyPXBvc3Rjc3Mtc2NzcycsXG4gICAgICAgIF0sXG4gICAgICB9LCB7XG4gICAgICAgIHRlc3Q6IC9cXC5qc29uJC8sXG4gICAgICAgIGxvYWRlcjogJ2pzb24tbG9hZGVyJyxcbiAgICAgIH0sIHtcbiAgICAgICAgdGVzdDogL1xcLnR4dCQvLFxuICAgICAgICBsb2FkZXI6ICdyYXctbG9hZGVyJyxcbiAgICAgIH0sIHtcbiAgICAgICAgdGVzdDogL1xcLihwbmd8anBnfGpwZWd8Z2lmfHN2Z3x3b2ZmfHdvZmYyKSQvLFxuICAgICAgICBsb2FkZXI6ICd1cmwtbG9hZGVyP2xpbWl0PTEwMDAwJyxcbiAgICAgIH0sIHtcbiAgICAgICAgdGVzdDogL1xcLihlb3R8dHRmfHdhdnxtcDMpJC8sXG4gICAgICAgIGxvYWRlcjogJ2ZpbGUtbG9hZGVyJyxcbiAgICAgIH0sXG4gICAgXSxcbiAgfSxcblxuICBwb3N0Y3NzOiBmdW5jdGlvbiBwbHVnaW5zKGJ1bmRsZXIpIHtcbiAgICByZXR1cm4gW1xuICAgICAgcmVxdWlyZSgncG9zdGNzcy1pbXBvcnQnKSh7IGFkZERlcGVuZGVuY3lUbzogYnVuZGxlciB9KSxcbiAgICAgIHJlcXVpcmUoJ3ByZWNzcycpKCksXG4gICAgICByZXF1aXJlKCdhdXRvcHJlZml4ZXInKSh7IGJyb3dzZXJzOiBBVVRPUFJFRklYRVJfQlJPV1NFUlMgfSksXG4gICAgXTtcbiAgfSxcbn07XG5cbi8vXG4vLyBDb25maWd1cmF0aW9uIGZvciB0aGUgY2xpZW50LXNpZGUgYnVuZGxlIChjbGllbnQuanMpXG4vLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXG5jb25zdCBjbGllbnRDb25maWcgPSBleHRlbmQodHJ1ZSwge30sIGNvbmZpZywge1xuICBlbnRyeTogJy4vc3JjL2NsaWVudC5qcycsXG4gIG91dHB1dDoge1xuICAgIHBhdGg6IHBhdGguam9pbihfX2Rpcm5hbWUsICcuLi9idWlsZC9wdWJsaWMnKSxcbiAgICBmaWxlbmFtZTogREVCVUcgPyAnW25hbWVdLmpzP1toYXNoXScgOiAnW25hbWVdLltoYXNoXS5qcycsXG4gIH0sXG5cbiAgLy8gQ2hvb3NlIGEgZGV2ZWxvcGVyIHRvb2wgdG8gZW5oYW5jZSBkZWJ1Z2dpbmdcbiAgLy8gaHR0cDovL3dlYnBhY2suZ2l0aHViLmlvL2RvY3MvY29uZmlndXJhdGlvbi5odG1sI2RldnRvb2xcbiAgZGV2dG9vbDogREVCVUcgPyAnY2hlYXAtbW9kdWxlLWV2YWwtc291cmNlLW1hcCcgOiBmYWxzZSxcbiAgcGx1Z2luczogW1xuICAgIG5ldyB3ZWJwYWNrLkRlZmluZVBsdWdpbihHTE9CQUxTKSxcbiAgICBuZXcgQXNzZXRzUGx1Z2luKHtcbiAgICAgIHBhdGg6IHBhdGguam9pbihfX2Rpcm5hbWUsICcuLi9idWlsZCcpLFxuICAgICAgZmlsZW5hbWU6ICdhc3NldHMuanMnLFxuICAgICAgcHJvY2Vzc091dHB1dDogeCA9PiBgbW9kdWxlLmV4cG9ydHMgPSAke0pTT04uc3RyaW5naWZ5KHgpfTtgLFxuICAgIH0pLFxuICAgIC4uLighREVCVUcgPyBbXG4gICAgICBuZXcgd2VicGFjay5vcHRpbWl6ZS5EZWR1cGVQbHVnaW4oKSxcbiAgICAgIG5ldyB3ZWJwYWNrLm9wdGltaXplLlVnbGlmeUpzUGx1Z2luKHtcbiAgICAgICAgY29tcHJlc3M6IHtcbiAgICAgICAgICAvLyBqc2NzOmRpc2FibGUgcmVxdWlyZUNhbWVsQ2FzZU9yVXBwZXJDYXNlSWRlbnRpZmllcnNcbiAgICAgICAgICBzY3Jld19pZTg6IHRydWUsXG5cbiAgICAgICAgICAvLyBqc2NzOmVuYWJsZSByZXF1aXJlQ2FtZWxDYXNlT3JVcHBlckNhc2VJZGVudGlmaWVyc1xuICAgICAgICAgIHdhcm5pbmdzOiBWRVJCT1NFLFxuICAgICAgICB9LFxuICAgICAgfSksXG4gICAgICBuZXcgd2VicGFjay5vcHRpbWl6ZS5BZ2dyZXNzaXZlTWVyZ2luZ1BsdWdpbigpLFxuICAgIF0gOiBbXSksXG4gIF0sXG59KTtcblxuLy9cbi8vIENvbmZpZ3VyYXRpb24gZm9yIHRoZSBzZXJ2ZXItc2lkZSBidW5kbGUgKHNlcnZlci5qcylcbi8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5cbmNvbnN0IHNlcnZlckNvbmZpZyA9IGV4dGVuZCh0cnVlLCB7fSwgY29uZmlnLCB7XG4gIGVudHJ5OiAnLi9zcmMvc2VydmVyLmpzJyxcbiAgb3V0cHV0OiB7XG4gICAgcGF0aDogJy4vYnVpbGQnLFxuICAgIGZpbGVuYW1lOiAnc2VydmVyLmpzJyxcbiAgICBsaWJyYXJ5VGFyZ2V0OiAnY29tbW9uanMyJyxcbiAgfSxcbiAgdGFyZ2V0OiAnbm9kZScsXG4gIGV4dGVybmFsczogW1xuICAgIC9eXFwuXFwvYXNzZXRzJC8sXG4gICAgZnVuY3Rpb24gZmlsdGVyKGNvbnRleHQsIHJlcXVlc3QsIGNiKSB7XG4gICAgICBjb25zdCBpc0V4dGVybmFsID1cbiAgICAgICAgcmVxdWVzdC5tYXRjaCgvXltAYS16XVthLXpcXC9cXC5cXC0wLTldKiQvaSkgJiZcbiAgICAgICAgIXJlcXVlc3QubWF0Y2goL15yZWFjdC1yb3V0aW5nLykgJiZcbiAgICAgICAgIWNvbnRleHQubWF0Y2goL1tcXFxcL11yZWFjdC1yb3V0aW5nLyk7XG4gICAgICBjYihudWxsLCBCb29sZWFuKGlzRXh0ZXJuYWwpKTtcbiAgICB9LFxuICBdLFxuICBub2RlOiB7XG4gICAgY29uc29sZTogZmFsc2UsXG4gICAgZ2xvYmFsOiBmYWxzZSxcbiAgICBwcm9jZXNzOiBmYWxzZSxcbiAgICBCdWZmZXI6IGZhbHNlLFxuICAgIF9fZmlsZW5hbWU6IGZhbHNlLFxuICAgIF9fZGlybmFtZTogZmFsc2UsXG4gIH0sXG4gIGRldnRvb2w6ICdzb3VyY2UtbWFwJyxcbiAgcGx1Z2luczogW1xuICAgIG5ldyB3ZWJwYWNrLkRlZmluZVBsdWdpbihHTE9CQUxTKSxcbiAgICBuZXcgd2VicGFjay5CYW5uZXJQbHVnaW4oJ3JlcXVpcmUoXCJzb3VyY2UtbWFwLXN1cHBvcnRcIikuaW5zdGFsbCgpOycsXG4gICAgICB7IHJhdzogdHJ1ZSwgZW50cnlPbmx5OiBmYWxzZSB9KSxcbiAgXSxcbn0pO1xuXG5leHBvcnQgZGVmYXVsdCBbY2xpZW50Q29uZmlnLCBzZXJ2ZXJDb25maWddO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "webpack.config.js"
+      ],
+      "names": [],
+      "mappings": "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",
+      "file": "webpack.config.js",
+      "sourcesContent": [
+        "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nimport path from 'path';\nimport webpack from 'webpack';\nimport extend from 'extend';\nimport AssetsPlugin from 'assets-webpack-plugin';\n\nconst DEBUG = !process.argv.includes('--release');\nconst VERBOSE = process.argv.includes('--verbose');\nconst AUTOPREFIXER_BROWSERS = [\n  'Android 2.3',\n  'Android >= 4',\n  'Chrome >= 35',\n  'Firefox >= 31',\n  'Explorer >= 9',\n  'iOS >= 7',\n  'Opera >= 12',\n  'Safari >= 7.1',\n];\nconst GLOBALS = {\n  'process.env.NODE_ENV': DEBUG ? '\"development\"' : '\"production\"',\n  __DEV__: DEBUG,\n};\n\n//\n// Common configuration chunk to be used for both\n// client-side (client.js) and server-side (server.js) bundles\n// -----------------------------------------------------------------------------\n\nconst config = {\n  output: {\n    publicPath: '/',\n    sourcePrefix: '  ',\n  },\n\n  cache: DEBUG,\n  debug: DEBUG,\n\n  stats: {\n    colors: true,\n    reasons: DEBUG,\n    hash: VERBOSE,\n    version: VERBOSE,\n    timings: true,\n    chunks: VERBOSE,\n    chunkModules: VERBOSE,\n    cached: VERBOSE,\n    cachedAssets: VERBOSE,\n  },\n\n  plugins: [\n    new webpack.optimize.OccurenceOrderPlugin(),\n  ],\n\n  resolve: {\n    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.json'],\n  },\n\n  module: {\n    loaders: [\n      {\n        test: /\\.jsx?$/,\n        include: [\n          path.resolve(__dirname, '../node_modules/react-routing/src'),\n          path.resolve(__dirname, '../src'),\n        ],\n        loader: 'babel-loader',\n      }, {\n        test: /\\.scss$/,\n        loaders: [\n          'isomorphic-style-loader',\n          `css-loader?${DEBUG ? 'sourceMap&' : 'minimize&'}modules&localIdentName=` +\n          `${DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]'}`,\n          'postcss-loader?parser=postcss-scss',\n        ],\n      }, {\n        test: /\\.json$/,\n        loader: 'json-loader',\n      }, {\n        test: /\\.txt$/,\n        loader: 'raw-loader',\n      }, {\n        test: /\\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,\n        loader: 'url-loader?limit=10000',\n      }, {\n        test: /\\.(eot|ttf|wav|mp3)$/,\n        loader: 'file-loader',\n      },\n    ],\n  },\n\n  postcss: function plugins(bundler) {\n    return [\n      require('postcss-import')({ addDependencyTo: bundler }),\n      require('precss')(),\n      require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS }),\n    ];\n  },\n};\n\n//\n// Configuration for the client-side bundle (client.js)\n// -----------------------------------------------------------------------------\n\nconst clientConfig = extend(true, {}, config, {\n  entry: './src/client.js',\n  output: {\n    path: path.join(__dirname, '../build/public'),\n    filename: DEBUG ? '[name].js?[hash]' : '[name].[hash].js',\n  },\n\n  // Choose a developer tool to enhance debugging\n  // http://webpack.github.io/docs/configuration.html#devtool\n  devtool: DEBUG ? 'cheap-module-eval-source-map' : false,\n  plugins: [\n    new webpack.DefinePlugin(GLOBALS),\n    new AssetsPlugin({\n      path: path.join(__dirname, '../build'),\n      filename: 'assets.js',\n      processOutput: x => `module.exports = ${JSON.stringify(x)};`,\n    }),\n    ...(!DEBUG ? [\n      new webpack.optimize.DedupePlugin(),\n      new webpack.optimize.UglifyJsPlugin({\n        compress: {\n          // jscs:disable requireCamelCaseOrUpperCaseIdentifiers\n          screw_ie8: true,\n\n          // jscs:enable requireCamelCaseOrUpperCaseIdentifiers\n          warnings: VERBOSE,\n        },\n      }),\n      new webpack.optimize.AggressiveMergingPlugin(),\n    ] : []),\n  ],\n});\n\n//\n// Configuration for the server-side bundle (server.js)\n// -----------------------------------------------------------------------------\n\nconst serverConfig = extend(true, {}, config, {\n  entry: './src/server.js',\n  output: {\n    path: './build',\n    filename: 'server.js',\n    libraryTarget: 'commonjs2',\n  },\n  target: 'node',\n  externals: [\n    /^\\.\\/assets$/,\n    function filter(context, request, cb) {\n      const isExternal =\n        request.match(/^[@a-z][a-z\\/\\.\\-0-9]*$/i) &&\n        !request.match(/^react-routing/) &&\n        !context.match(/[\\\\/]react-routing/);\n      cb(null, Boolean(isExternal));\n    },\n  ],\n  node: {\n    console: false,\n    global: false,\n    process: false,\n    Buffer: false,\n    __filename: false,\n    __dirname: false,\n  },\n  devtool: 'source-map',\n  plugins: [\n    new webpack.DefinePlugin(GLOBALS),\n    new webpack.BannerPlugin('require(\"source-map-support\").install();',\n      { raw: true, entryOnly: false }),\n  ],\n});\n\nexport default [clientConfig, serverConfig];\n"
+      ]
+    },
+    "mtime": 1454268397000
+  },
+  "{\"filename\":\"/home/client_frontend/tools/clean.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false}:6.4.5": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "del",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "del"
+              }
+            ]
+          },
+          {
+            "source": "./lib/fs",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fs"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/client_frontend/tools/clean.js",
+      "filenameRelative": "/home/client_frontend/tools/clean.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "clean.js",
+      "sourceFileName": "clean.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "basename": "clean"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _regenerator = require('babel-runtime/regenerator');\n\nvar _regenerator2 = _interopRequireDefault(_regenerator);\n\nvar _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');\n\nvar _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _del = require('del');\n\nvar _del2 = _interopRequireDefault(_del);\n\nvar _fs = require('./lib/fs');\n\nvar _fs2 = _interopRequireDefault(_fs);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\n * Cleans up the output (build) directory.\n */\n/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nvar clean = function () {\n  var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {\n    return _regenerator2.default.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return (0, _del2.default)(['.tmp', 'build/*', '!build/.git'], { dot: true });\n\n          case 2:\n            _context.next = 4;\n            return _fs2.default.makeDir('build/public');\n\n          case 4:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  }));\n  return function clean() {\n    return ref.apply(this, arguments);\n  };\n}();\n\nexports.default = clean;\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNsZWFuLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7dUVBZUE7Ozs7OzttQkFDUSxtQkFBSSxDQUFDLE1BQUQsRUFBUyxTQUFULEVBQW9CLGFBQXBCLENBQUosRUFBd0MsRUFBRSxLQUFLLElBQUwsRUFBMUM7Ozs7bUJBQ0EsYUFBRyxPQUFILENBQVcsY0FBWDs7Ozs7Ozs7R0FGUjtrQkFBZTs7Ozs7a0JBS0EiLCJmaWxlIjoiY2xlYW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIFJlYWN0IFN0YXJ0ZXIgS2l0IChodHRwczovL3d3dy5yZWFjdHN0YXJ0ZXJraXQuY29tLylcbiAqXG4gKiBDb3B5cmlnaHQgwqkgMjAxNC0yMDE2IEtyaWFzb2Z0LCBMTEMuIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKlxuICogVGhpcyBzb3VyY2UgY29kZSBpcyBsaWNlbnNlZCB1bmRlciB0aGUgTUlUIGxpY2Vuc2UgZm91bmQgaW4gdGhlXG4gKiBMSUNFTlNFLnR4dCBmaWxlIGluIHRoZSByb290IGRpcmVjdG9yeSBvZiB0aGlzIHNvdXJjZSB0cmVlLlxuICovXG5cbmltcG9ydCBkZWwgZnJvbSAnZGVsJztcbmltcG9ydCBmcyBmcm9tICcuL2xpYi9mcyc7XG5cbi8qKlxuICogQ2xlYW5zIHVwIHRoZSBvdXRwdXQgKGJ1aWxkKSBkaXJlY3RvcnkuXG4gKi9cbmFzeW5jIGZ1bmN0aW9uIGNsZWFuKCkge1xuICBhd2FpdCBkZWwoWycudG1wJywgJ2J1aWxkLyonLCAnIWJ1aWxkLy5naXQnXSwgeyBkb3Q6IHRydWUgfSk7XG4gIGF3YWl0IGZzLm1ha2VEaXIoJ2J1aWxkL3B1YmxpYycpO1xufVxuXG5leHBvcnQgZGVmYXVsdCBjbGVhbjtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "clean.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;uEAeA;;;;;;mBACQ,mBAAI,CAAC,MAAD,EAAS,SAAT,EAAoB,aAApB,CAAJ,EAAwC,EAAE,KAAK,IAAL,EAA1C;;;;mBACA,aAAG,OAAH,CAAW,cAAX;;;;;;;;GAFR;kBAAe;;;;;kBAKA",
+      "file": "clean.js",
+      "sourcesContent": [
+        "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nimport del from 'del';\nimport fs from './lib/fs';\n\n/**\n * Cleans up the output (build) directory.\n */\nasync function clean() {\n  await del(['.tmp', 'build/*', '!build/.git'], { dot: true });\n  await fs.makeDir('build/public');\n}\n\nexport default clean;\n"
+      ]
+    },
+    "mtime": 1451415398000
+  },
+  "{\"filename\":\"/home/client_frontend/tools/lib/fs.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false}:6.4.5": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "fs",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fs"
+              }
+            ]
+          },
+          {
+            "source": "mkdirp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "mkdirp"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/client_frontend/tools/lib/fs.js",
+      "filenameRelative": "/home/client_frontend/tools/lib/fs.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "fs.js",
+      "sourceFileName": "fs.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "basename": "fs"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _promise = require('babel-runtime/core-js/promise');\n\nvar _promise2 = _interopRequireDefault(_promise);\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _fs = require('fs');\n\nvar _fs2 = _interopRequireDefault(_fs);\n\nvar _mkdirp = require('mkdirp');\n\nvar _mkdirp2 = _interopRequireDefault(_mkdirp);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nvar writeFile = function writeFile(file, contents) {\n  return new _promise2.default(function (resolve, reject) {\n    _fs2.default.writeFile(file, contents, 'utf8', function (err) {\n      return err ? reject(err) : resolve();\n    });\n  });\n};\n\nvar makeDir = function makeDir(name) {\n  return new _promise2.default(function (resolve, reject) {\n    (0, _mkdirp2.default)(name, function (err) {\n      return err ? reject(err) : resolve();\n    });\n  });\n};\n\nexports.default = { writeFile: writeFile, makeDir: makeDir };\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZzLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBWUEsSUFBTSxZQUFZLFNBQVosU0FBWSxDQUFDLElBQUQsRUFBTyxRQUFQO1NBQW9CLHNCQUFZLFVBQUMsT0FBRCxFQUFVLE1BQVYsRUFBcUI7QUFDckUsaUJBQUcsU0FBSCxDQUFhLElBQWIsRUFBbUIsUUFBbkIsRUFBNkIsTUFBN0IsRUFBcUM7YUFBTyxNQUFNLE9BQU8sR0FBUCxDQUFOLEdBQW9CLFNBQXBCO0tBQVAsQ0FBckMsQ0FEcUU7R0FBckI7Q0FBaEM7O0FBSWxCLElBQU0sVUFBVSxTQUFWLE9BQVUsQ0FBQyxJQUFEO1NBQVUsc0JBQVksVUFBQyxPQUFELEVBQVUsTUFBVixFQUFxQjtBQUN6RCwwQkFBTyxJQUFQLEVBQWE7YUFBTyxNQUFNLE9BQU8sR0FBUCxDQUFOLEdBQW9CLFNBQXBCO0tBQVAsQ0FBYixDQUR5RDtHQUFyQjtDQUF0Qjs7a0JBSUQsRUFBRSxvQkFBRixFQUFhLGdCQUFiIiwiZmlsZSI6ImZzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBSZWFjdCBTdGFydGVyIEtpdCAoaHR0cHM6Ly93d3cucmVhY3RzdGFydGVya2l0LmNvbS8pXG4gKlxuICogQ29weXJpZ2h0IMKpIDIwMTQtMjAxNiBLcmlhc29mdCwgTExDLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICpcbiAqIFRoaXMgc291cmNlIGNvZGUgaXMgbGljZW5zZWQgdW5kZXIgdGhlIE1JVCBsaWNlbnNlIGZvdW5kIGluIHRoZVxuICogTElDRU5TRS50eHQgZmlsZSBpbiB0aGUgcm9vdCBkaXJlY3Rvcnkgb2YgdGhpcyBzb3VyY2UgdHJlZS5cbiAqL1xuXG5pbXBvcnQgZnMgZnJvbSAnZnMnO1xuaW1wb3J0IG1rZGlycCBmcm9tICdta2RpcnAnO1xuXG5jb25zdCB3cml0ZUZpbGUgPSAoZmlsZSwgY29udGVudHMpID0+IG5ldyBQcm9taXNlKChyZXNvbHZlLCByZWplY3QpID0+IHtcbiAgZnMud3JpdGVGaWxlKGZpbGUsIGNvbnRlbnRzLCAndXRmOCcsIGVyciA9PiBlcnIgPyByZWplY3QoZXJyKSA6IHJlc29sdmUoKSk7XG59KTtcblxuY29uc3QgbWFrZURpciA9IChuYW1lKSA9PiBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gIG1rZGlycChuYW1lLCBlcnIgPT4gZXJyID8gcmVqZWN0KGVycikgOiByZXNvbHZlKCkpO1xufSk7XG5cbmV4cG9ydCBkZWZhdWx0IHsgd3JpdGVGaWxlLCBtYWtlRGlyIH07XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "fs.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAYA,IAAM,YAAY,SAAZ,SAAY,CAAC,IAAD,EAAO,QAAP;SAAoB,sBAAY,UAAC,OAAD,EAAU,MAAV,EAAqB;AACrE,iBAAG,SAAH,CAAa,IAAb,EAAmB,QAAnB,EAA6B,MAA7B,EAAqC;aAAO,MAAM,OAAO,GAAP,CAAN,GAAoB,SAApB;KAAP,CAArC,CADqE;GAArB;CAAhC;;AAIlB,IAAM,UAAU,SAAV,OAAU,CAAC,IAAD;SAAU,sBAAY,UAAC,OAAD,EAAU,MAAV,EAAqB;AACzD,0BAAO,IAAP,EAAa;aAAO,MAAM,OAAO,GAAP,CAAN,GAAoB,SAApB;KAAP,CAAb,CADyD;GAArB;CAAtB;;kBAID,EAAE,oBAAF,EAAa,gBAAb",
+      "file": "fs.js",
+      "sourcesContent": [
+        "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nimport fs from 'fs';\nimport mkdirp from 'mkdirp';\n\nconst writeFile = (file, contents) => new Promise((resolve, reject) => {\n  fs.writeFile(file, contents, 'utf8', err => err ? reject(err) : resolve());\n});\n\nconst makeDir = (name) => new Promise((resolve, reject) => {\n  mkdirp(name, err => err ? reject(err) : resolve());\n});\n\nexport default { writeFile, makeDir };\n"
+      ]
+    },
+    "mtime": 1451415398000
+  },
+  "{\"filename\":\"/home/client_frontend/tools/copy.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false}:6.4.5": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "gaze",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "gaze"
+              }
+            ]
+          },
+          {
+            "source": "replace",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "replace"
+              }
+            ]
+          },
+          {
+            "source": "bluebird",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "Promise"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/home/client_frontend/tools/copy.js",
+      "filenameRelative": "/home/client_frontend/tools/copy.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMap": "both",
+      "sourceMaps": "both",
+      "sourceMapTarget": "copy.js",
+      "sourceFileName": "copy.js",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleIds": false,
+      "basename": "copy"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _regenerator = require('babel-runtime/regenerator');\n\nvar _regenerator2 = _interopRequireDefault(_regenerator);\n\nvar _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');\n\nvar _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _gaze = require('gaze');\n\nvar _gaze2 = _interopRequireDefault(_gaze);\n\nvar _replace = require('replace');\n\nvar _replace2 = _interopRequireDefault(_replace);\n\nvar _bluebird = require('bluebird');\n\nvar _bluebird2 = _interopRequireDefault(_bluebird);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\n * Copies static files such as robots.txt, favicon.ico to the\n * output (build) folder.\n */\n/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nvar copy = function () {\n  var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {\n    var _this2 = this;\n\n    var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];\n\n    var watch = _ref.watch;\n    var ncp, watcher;\n    return _regenerator2.default.wrap(function _callee2$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            ncp = _bluebird2.default.promisify(require('ncp'));\n            _context2.next = 3;\n            return _bluebird2.default.all([ncp('src/public', 'build/public'), ncp('src/content', 'build/content'), ncp('package.json', 'build/package.json')]);\n\n          case 3:\n\n            (0, _replace2.default)({\n              regex: '\"start\".*',\n              replacement: '\"start\": \"node server.js\"',\n              paths: ['build/package.json'],\n              recursive: false,\n              silent: false\n            });\n\n            if (!watch) {\n              _context2.next = 9;\n              break;\n            }\n\n            _context2.next = 7;\n            return new _bluebird2.default(function (resolve, reject) {\n              (0, _gaze2.default)('src/content/**/*.*', function (err, val) {\n                return err ? reject(err) : resolve(val);\n              });\n            });\n\n          case 7:\n            watcher = _context2.sent;\n\n            watcher.on('changed', function () {\n              var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee(file) {\n                var relPath;\n                return _regenerator2.default.wrap(function _callee$(_context) {\n                  while (1) {\n                    switch (_context.prev = _context.next) {\n                      case 0:\n                        relPath = file.substr(_path2.default.join(__dirname, '../src/content/').length);\n                        _context.next = 3;\n                        return ncp('src/content/' + relPath, 'build/content/' + relPath);\n\n                      case 3:\n                      case 'end':\n                        return _context.stop();\n                    }\n                  }\n                }, _callee, _this2);\n              })),\n                  _this = _this2;\n              return function (_x3) {\n                return ref.apply(_this, arguments);\n              };\n            }());\n\n          case 9:\n          case 'end':\n            return _context2.stop();\n        }\n      }\n    }, _callee2, this);\n  }));\n  return function copy(_x) {\n    return ref.apply(this, arguments);\n  };\n}();\n\nexports.default = copy;\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvcHkuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozt1RUFrQkE7OztxRUFBZ0M7O1FBQVY7UUFDZCxLQWlCRTs7Ozs7QUFqQkYsa0JBQU0sbUJBQVEsU0FBUixDQUFrQixRQUFRLEtBQVIsQ0FBbEI7O21CQUVOLG1CQUFRLEdBQVIsQ0FBWSxDQUNoQixJQUFJLFlBQUosRUFBa0IsY0FBbEIsQ0FEZ0IsRUFFaEIsSUFBSSxhQUFKLEVBQW1CLGVBQW5CLENBRmdCLEVBR2hCLElBQUksY0FBSixFQUFvQixvQkFBcEIsQ0FIZ0IsQ0FBWjs7OztBQU1OLG1DQUFRO0FBQ04scUJBQU8sV0FBUDtBQUNBLDJCQUFhLDJCQUFiO0FBQ0EscUJBQU8sQ0FBQyxvQkFBRCxDQUFQO0FBQ0EseUJBQVcsS0FBWDtBQUNBLHNCQUFRLEtBQVI7YUFMRjs7aUJBUUk7Ozs7OzttQkFDb0IsdUJBQVksVUFBQyxPQUFELEVBQVUsTUFBVixFQUFxQjtBQUNyRCxrQ0FBSyxvQkFBTCxFQUEyQixVQUFDLEdBQUQsRUFBTSxHQUFOO3VCQUFjLE1BQU0sT0FBTyxHQUFQLENBQU4sR0FBb0IsUUFBUSxHQUFSLENBQXBCO2VBQWQsQ0FBM0IsQ0FEcUQ7YUFBckI7OztBQUE1Qjs7QUFHTixvQkFBUSxFQUFSLENBQVcsU0FBWDttRkFBc0IsaUJBQU8sSUFBUDtvQkFDZDs7Ozs7a0NBQVUsS0FBSyxNQUFMLENBQVksZUFBSyxJQUFMLENBQVUsU0FBVixFQUFxQixpQkFBckIsRUFBd0MsTUFBeEM7OytCQUN0QixxQkFBbUIsT0FBbkIscUJBQStDLE9BQS9DOzs7Ozs7OztlQUZjOzs7OztlQUF0Qjs7Ozs7Ozs7R0FyQko7a0JBQWU7Ozs7O2tCQTRCQSIsImZpbGUiOiJjb3B5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBSZWFjdCBTdGFydGVyIEtpdCAoaHR0cHM6Ly93d3cucmVhY3RzdGFydGVya2l0LmNvbS8pXG4gKlxuICogQ29weXJpZ2h0IMKpIDIwMTQtMjAxNiBLcmlhc29mdCwgTExDLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICpcbiAqIFRoaXMgc291cmNlIGNvZGUgaXMgbGljZW5zZWQgdW5kZXIgdGhlIE1JVCBsaWNlbnNlIGZvdW5kIGluIHRoZVxuICogTElDRU5TRS50eHQgZmlsZSBpbiB0aGUgcm9vdCBkaXJlY3Rvcnkgb2YgdGhpcyBzb3VyY2UgdHJlZS5cbiAqL1xuXG5pbXBvcnQgcGF0aCBmcm9tICdwYXRoJztcbmltcG9ydCBnYXplIGZyb20gJ2dhemUnO1xuaW1wb3J0IHJlcGxhY2UgZnJvbSAncmVwbGFjZSc7XG5pbXBvcnQgUHJvbWlzZSBmcm9tICdibHVlYmlyZCc7XG5cbi8qKlxuICogQ29waWVzIHN0YXRpYyBmaWxlcyBzdWNoIGFzIHJvYm90cy50eHQsIGZhdmljb24uaWNvIHRvIHRoZVxuICogb3V0cHV0IChidWlsZCkgZm9sZGVyLlxuICovXG5hc3luYyBmdW5jdGlvbiBjb3B5KHsgd2F0Y2ggfSA9IHt9KSB7XG4gIGNvbnN0IG5jcCA9IFByb21pc2UucHJvbWlzaWZ5KHJlcXVpcmUoJ25jcCcpKTtcblxuICBhd2FpdCBQcm9taXNlLmFsbChbXG4gICAgbmNwKCdzcmMvcHVibGljJywgJ2J1aWxkL3B1YmxpYycpLFxuICAgIG5jcCgnc3JjL2NvbnRlbnQnLCAnYnVpbGQvY29udGVudCcpLFxuICAgIG5jcCgncGFja2FnZS5qc29uJywgJ2J1aWxkL3BhY2thZ2UuanNvbicpLFxuICBdKTtcblxuICByZXBsYWNlKHtcbiAgICByZWdleDogJ1wic3RhcnRcIi4qJyxcbiAgICByZXBsYWNlbWVudDogJ1wic3RhcnRcIjogXCJub2RlIHNlcnZlci5qc1wiJyxcbiAgICBwYXRoczogWydidWlsZC9wYWNrYWdlLmpzb24nXSxcbiAgICByZWN1cnNpdmU6IGZhbHNlLFxuICAgIHNpbGVudDogZmFsc2UsXG4gIH0pO1xuXG4gIGlmICh3YXRjaCkge1xuICAgIGNvbnN0IHdhdGNoZXIgPSBhd2FpdCBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gICAgICBnYXplKCdzcmMvY29udGVudC8qKi8qLionLCAoZXJyLCB2YWwpID0+IGVyciA/IHJlamVjdChlcnIpIDogcmVzb2x2ZSh2YWwpKTtcbiAgICB9KTtcbiAgICB3YXRjaGVyLm9uKCdjaGFuZ2VkJywgYXN5bmMgKGZpbGUpID0+IHtcbiAgICAgIGNvbnN0IHJlbFBhdGggPSBmaWxlLnN1YnN0cihwYXRoLmpvaW4oX19kaXJuYW1lLCAnLi4vc3JjL2NvbnRlbnQvJykubGVuZ3RoKTtcbiAgICAgIGF3YWl0IG5jcChgc3JjL2NvbnRlbnQvJHtyZWxQYXRofWAsIGBidWlsZC9jb250ZW50LyR7cmVsUGF0aH1gKTtcbiAgICB9KTtcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBjb3B5O1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "copy.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;uEAkBA;;;qEAAgC;;QAAV;QACd,KAiBE;;;;;AAjBF,kBAAM,mBAAQ,SAAR,CAAkB,QAAQ,KAAR,CAAlB;;mBAEN,mBAAQ,GAAR,CAAY,CAChB,IAAI,YAAJ,EAAkB,cAAlB,CADgB,EAEhB,IAAI,aAAJ,EAAmB,eAAnB,CAFgB,EAGhB,IAAI,cAAJ,EAAoB,oBAApB,CAHgB,CAAZ;;;;AAMN,mCAAQ;AACN,qBAAO,WAAP;AACA,2BAAa,2BAAb;AACA,qBAAO,CAAC,oBAAD,CAAP;AACA,yBAAW,KAAX;AACA,sBAAQ,KAAR;aALF;;iBAQI;;;;;;mBACoB,uBAAY,UAAC,OAAD,EAAU,MAAV,EAAqB;AACrD,kCAAK,oBAAL,EAA2B,UAAC,GAAD,EAAM,GAAN;uBAAc,MAAM,OAAO,GAAP,CAAN,GAAoB,QAAQ,GAAR,CAApB;eAAd,CAA3B,CADqD;aAArB;;;AAA5B;;AAGN,oBAAQ,EAAR,CAAW,SAAX;mFAAsB,iBAAO,IAAP;oBACd;;;;;kCAAU,KAAK,MAAL,CAAY,eAAK,IAAL,CAAU,SAAV,EAAqB,iBAArB,EAAwC,MAAxC;;+BACtB,qBAAmB,OAAnB,qBAA+C,OAA/C;;;;;;;;eAFc;;;;;eAAtB;;;;;;;;GArBJ;kBAAe;;;;;kBA4BA",
+      "file": "copy.js",
+      "sourcesContent": [
+        "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\nimport path from 'path';\nimport gaze from 'gaze';\nimport replace from 'replace';\nimport Promise from 'bluebird';\n\n/**\n * Copies static files such as robots.txt, favicon.ico to the\n * output (build) folder.\n */\nasync function copy({ watch } = {}) {\n  const ncp = Promise.promisify(require('ncp'));\n\n  await Promise.all([\n    ncp('src/public', 'build/public'),\n    ncp('src/content', 'build/content'),\n    ncp('package.json', 'build/package.json'),\n  ]);\n\n  replace({\n    regex: '\"start\".*',\n    replacement: '\"start\": \"node server.js\"',\n    paths: ['build/package.json'],\n    recursive: false,\n    silent: false,\n  });\n\n  if (watch) {\n    const watcher = await new Promise((resolve, reject) => {\n      gaze('src/content/**/*.*', (err, val) => err ? reject(err) : resolve(val));\n    });\n    watcher.on('changed', async (file) => {\n      const relPath = file.substr(path.join(__dirname, '../src/content/').length);\n      await ncp(`src/content/${relPath}`, `build/content/${relPath}`);\n    });\n  }\n}\n\nexport default copy;\n"
+      ]
+    },
+    "mtime": 1451415398000
+  }
+}

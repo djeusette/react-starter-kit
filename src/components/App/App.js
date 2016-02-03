@@ -12,6 +12,7 @@ import s from './App.scss';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+import DevTools from '../DevTools';
 
 class App extends Component {
 
@@ -42,6 +43,7 @@ class App extends Component {
         {this.props.children}
         <Feedback />
         <Footer />
+        <DevTools />
       </div>
     ) : this.props.children;
   }

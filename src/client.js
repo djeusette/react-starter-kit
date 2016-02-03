@@ -16,6 +16,8 @@ import { Router, match } from 'react-router';
 import RouterContext from './CustomRouterContext';
 import Location from './core/Location';
 import { addEventListener, removeEventListener } from './core/DOMUtils';
+import { Provider } from 'react-redux'
+import { configureStore } from './store';
 
 let cssContainer = document.getElementById('css');
 const appContainer = document.getElementById('app');
@@ -40,7 +42,8 @@ const context = {
 
 function render(state) {
   const renderFn = function(props) { return <RouterContext {...props} /> };
-  const component = <Router {...state} render={renderFn} context={context} />;
+  const store = configureStore({});
+  const component = <Provider store={store}><Router {...state} render={renderFn} context={context} /></Provider>;
 
   ReactDOM.render(component, appContainer, () => {
     // Remove the pre-rendered CSS because it's no longer used

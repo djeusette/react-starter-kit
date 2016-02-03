@@ -18,6 +18,8 @@ import { match } from 'react-router';
 import Html from './components/Html';
 import assets from './assets';
 import { port } from './config';
+import { Provider } from 'react-redux';
+import { configureStore } from './store';
 
 const server = global.server = express();
 
@@ -52,7 +54,9 @@ server.get('*', async (req, res, next) => {
       } else if (redirectLocation) {
         res.redirect(302, redirectLocation.pathname + redirectLocation.search)
       } else if (renderProps) {
-        data.body = ReactDOM.renderToString(<RouterContext {...renderProps} context={context} />);
+        const store = configureStore({}, req.url);
+        const component = <Provider store={store}><RouterContext {...renderProps} context={context} /></Provider>;
+        data.body = ReactDOM.renderToString(component);
         data.css = css.join('');
         const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);
         res.status(200).send('<!doctype html>\n' + html);
