@@ -1,6 +1,6 @@
 import fetch from '../core/fetch';
 import ContentPage from '../components/ContentPage';
-import App from '../components/App';
+import Root from '../components/Root';
 
 const content = ["about", "index", "privacy"];
 
@@ -17,7 +17,7 @@ export function getContentRoutes() {
   content.forEach((page) => {
     routes.push({
       path: '/' + page,
-      component: App,
+      component: Root,
       getIndexRoute(location, callback) {
         return getContentRoute(location).then(function(contentRoute) {
           callback(null, contentRoute);

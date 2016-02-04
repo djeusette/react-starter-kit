@@ -6,3 +6,5 @@ build
 node_modules
 ncp-debug.log
 npm-debug.log
+.*_history
+.babel.json

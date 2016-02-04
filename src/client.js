@@ -17,7 +17,7 @@ import RouterContext from './CustomRouterContext';
 import Location from './core/Location';
 import { addEventListener, removeEventListener } from './core/DOMUtils';
 import { Provider } from 'react-redux'
-import { configureStore } from './store';
+import configureStore from './store/configureStore';
 
 let cssContainer = document.getElementById('css');
 const appContainer = document.getElementById('app');

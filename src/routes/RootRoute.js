@@ -1,4 +1,4 @@
-import App from '../components/App';
+import Root from '../components/Root';
 import ContactRoute from './ContactRoute';
 import LoginRoute from './LoginRoute';
 import RegisterRoute from './RegisterRoute';
@@ -6,7 +6,7 @@ import { getContentRoute } from './ContentRoutes';
 
 export default {
   path: '/',
-  component: App,
+  component: Root,
   getChildRoutes(location, callback) {
     callback(null, [ ContactRoute, LoginRoute, RegisterRoute ]);
   },
