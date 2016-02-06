@@ -1,0 +1,13 @@
+FROM mhart/alpine-node:5
+
+ENV HOME /home/client_frontend
+WORKDIR $HOME
+
+ADD package.json $HOME/
+RUN npm install --production
+
+ADD build $HOME
+
+EXPOSE 5000
+
+CMD ["node", "server.js"]
