@@ -1,12 +1,3 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import path from 'path';
 import webpack from 'webpack';
 import extend from 'extend';
@@ -68,18 +59,17 @@ const config = {
       {
         test: /\.jsx?$/,
         include: [
-          path.resolve(__dirname, '../node_modules/react-routing/src'),
           path.resolve(__dirname, '../src'),
         ],
         loader: 'babel-loader',
       }, {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         loaders: [
           'isomorphic-style-loader',
           `css-loader?${DEBUG ? 'sourceMap&' : 'minimize&'}modules&localIdentName=` +
           `${DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]'}`,
           'postcss-loader?parser=postcss-scss',
-        ],
+        ]
       }, {
         test: /\.json$/,
         loader: 'json-loader',
@@ -92,7 +82,7 @@ const config = {
       }, {
         test: /\.(eot|ttf|wav|mp3)$/,
         loader: 'file-loader',
-      },
+      }
     ],
   },
 
@@ -100,6 +90,7 @@ const config = {
     return [
       require('postcss-import')({ addDependencyTo: bundler }),
       require('precss')(),
+      require('postcss-url')({copy: 'rebase'}),
       require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS }),
     ];
   },
@@ -158,9 +149,7 @@ const serverConfig = extend(true, {}, config, {
     /^\.\/assets$/,
     function filter(context, request, cb) {
       const isExternal =
-        request.match(/^[@a-z][a-z\/\.\-0-9]*$/i) &&
-        !request.match(/^react-routing/) &&
-        !context.match(/[\\/]react-routing/);
+        request.match(/^[@a-z][a-z\/\.\-0-9]*$/i);
       cb(null, Boolean(isExternal));
     },
   ],
